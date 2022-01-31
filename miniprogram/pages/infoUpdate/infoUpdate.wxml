@@ -1,0 +1,53 @@
+<!--pages/info/infoUpdate/infoUpdate.wxml-->
+<text>pages/info/infoUpdate/infoUpdate.wxml</text>
+<nav
+    title="个人信息"
+    alwaysShow
+    back
+>
+</nav>
+
+<toast id="toast"></toast>
+
+<view class="body interval" style="padding-top: {{ headerHeight }}px">
+   
+    <!-- 其他 -->
+    <view class="other">
+        <view>
+            <text class='tip-text-big flag-name-text'>{{ "我的名字" }}</text>
+            <input class='flag-name' type='text' placeholder='{{ userName }}' bindinput="nameInput" maxlength="10" value="{{ name }}"></input>
+        </view>
+        <view>
+            <text class='tip-text-big flag-name-text'>{{ "学校" }}</text>
+            <input class='flag-name' type='text' placeholder='{{ userSchool }}' bindinput="schoolInput" maxlength="20" value="{{ school }}"></input>
+        </view>
+        <view>
+            <text class='tip-text-big flag-name-text'>{{ "年龄" }}</text>
+            <input class='flag-name' type='text' placeholder='{{ userAge }}' bindinput="ageInput" maxlength="5" value="{{ age }}"></input>
+        </view>
+        <view>
+            <text class='tip-text-big flag-name-text'>{{ "职业经历" }}</text>
+            <input class='flag-name' type='text' placeholder='{{ userCareer }}' bindinput="careerInput" maxlength="20" value="{{ career }}"></input>
+        </view>
+
+        
+    </view>
+    <!-- 其他 end -->
+</view>
+
+<!-- 保存 -->
+<view class="btn-bg">
+  <view class='finish-btn mango-bg' bindtap="save">{{ text.finish }}</view>
+</view>
+<!-- 保存 end -->
+<!--
+ 
+<view style="margin-bottom:50rpx" wx:if="{{ edit_id }}">
+  <view class='del-btn' bindtap="del">{{ text.delete }}</view>
+</view>
+删除 end  -->
+
+<view class="egg">
+  <text class="egg-1">{{ text.egg }}</text>
+  <text class="egg-2">{{ text.mango }}</text>
+</view>

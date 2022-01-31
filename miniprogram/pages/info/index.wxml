@@ -1,0 +1,56 @@
+<!--pages/addV2/add.wxml-->
+<nav
+    title="个人信息"
+    alwaysShow
+    back
+>
+</nav>
+
+<toast id="toast"></toast>
+
+<view class="body interval" style="padding-top: {{ headerHeight }}px">
+   
+    <!-- 其他 -->
+    <view class="other">
+        <view>
+            <text class='tip-text-big flag-name-text'>{{ "我的名字" }}</text>
+            <input class='flag-name' disabled="disabled" type='text' value='{{ userName }}'></input>
+        </view>
+        <view>
+            <text class='tip-text-big flag-name-text'>{{ "学校" }}</text>
+            <input class='flag-name' disabled="disabled"type='text' value='{{ userSchool }}' ></input>
+        </view>
+        <view>
+            <text class='tip-text-big flag-name-text'>{{ "年龄" }}</text>
+            <input class='flag-name' disabled="disabled"type='text' value='{{ userAge }}'></input>
+        </view>
+        <view>
+            <text class='tip-text-big flag-name-text'>{{ "职业经历" }}</text>
+            <input class='flag-name' disabled="disabled"type='text' value='{{ userCareer }}'></input>
+        </view>
+
+        
+    </view>
+    <!-- 其他 end -->
+</view>
+
+<!-- 修改 -->
+<view class="btn-bg">
+    <view class='finish-btn mango-bg'>
+        <navigator url = "/pages/infoUpdate/infoUpdate">
+            <text>{{ "修改信息" }}</text>
+        </navigator>
+    </view>
+</view>
+
+<!-- 保存 end -->
+<!-- 删除 -->
+<view style="margin-bottom:50rpx" wx:if="{{ edit_id }}">
+  <view class='del-btn' bindtap="del">{{ text.delete }}</view>
+</view>
+<!-- 删除 end -->
+
+<view class="egg">
+  <text class="egg-1">{{ text.egg }}</text>
+  <text class="egg-2">{{ text.mango }}</text>
+</view>
