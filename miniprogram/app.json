@@ -1,11 +1,12 @@
 {
    "pages": [
+      "pages/search/search",
+      "pages/square/square/square",
+      "pages/mineV2/mine",
       "pages/indexV2/index",
       "pages/setting/setting",
       "pages/award/award/award",
       "pages/invite/invite",
-      "pages/square/square/square",
-      "pages/mineV2/mine",
       "pages/award/add/add",
       "pages/square/detail/detail",
       "pages/square/add/add",
@@ -29,28 +30,16 @@
       "backgroundColor": "#000000",
       "list": [
          {
-            "pagePath": "pages/indexV2/index",
+            "pagePath": "pages/search/search",
             "iconPath": "images/tabBar/index.png",
             "selectedIconPath": "images/tabBar/index_s.png",
-            "text": "今天"
+            "text": "搜索"
          },
          {
             "pagePath": "pages/square/square/square",
             "iconPath": "/images/tabBar/square.png",
             "selectedIconPath": "/images/tabBar/square_s.png",
             "text": "广场"
-         },
-         {
-            "pagePath": "pages/award/award/award",
-            "iconPath": "/images/tabBar/award.png",
-            "selectedIconPath": "/images/tabBar/award_s.png",
-            "text": "奖励"
-         },
-         {
-            "pagePath": "pages/mineV2/mine",
-            "iconPath": "images/tabBar/mine.png",
-            "selectedIconPath": "images/tabBar/mine_s.png",
-            "text": "我"
          }
       ]
    },
