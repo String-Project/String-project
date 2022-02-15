@@ -39,7 +39,7 @@
             "pagePath": "pages/square/square/square",
             "iconPath": "/images/tabBar/square.png",
             "selectedIconPath": "/images/tabBar/square_s.png",
-            "text": "广场"
+            "text": "我的"
          }
       ]
    },

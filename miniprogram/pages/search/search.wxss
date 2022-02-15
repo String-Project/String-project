@@ -1,3 +1,92 @@
 page {
     background: #FFFFFF;
 }
+/* 顶部 */
+.head {
+    position: absolute;
+    width: 390px;
+    height: 295px;
+    left: 0px;
+    top: 0px;
+
+    z-index: 1;
+    background: #4F71BE;
+}
+/* 弦计划中文 */
+.stringChinese {
+    position: absolute;
+    width: 136px;
+    height: 35px;
+    left: 24px;
+    top: 57px;
+
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+
+    color: #FFFFFF;
+}
+/* 弦计划英文 */
+.stringEnglish {
+    position: absolute;
+    width: 215px;
+    height: 27px;
+    left: 24px;
+    top: 92px;
+
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: #FFFFFF; 
+}
+/* Swiper相关的样式 */
+.swiper {
+    position: absolute;
+    height: 109px;
+    top: 143px;
+    width: 100vw;
+}
+.information {
+    height: 109px;
+    width: 342px;
+    background: #7293DD;
+    border-radius: 10px;
+}
+/* 搜索框 */
+.searchBar {
+    position: absolute;
+    width: 342px;
+    height: 47px;
+    left: 24px;
+    top: 271px;
+
+    z-index: 2;
+    background: #FFFFFF;
+    border: 1px solid #4F71BE;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+/* 隐私政策等 */
+.policy {
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    left: 50px;
+    top: 690px;
+
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #516798;
+}

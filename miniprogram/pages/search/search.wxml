@@ -1,0 +1,20 @@
+<view class="head">
+    <text class="stringChinese">弦计划</text>
+    <text class="stringEnglish">Project String</text>
+    <swiper hidden="{{swiperHidden}}" autoplay="{{true}}" previous-margin="20px" next-margin="20px"
+            vertical="{{false}}" interval="3000" duration="1500" class="swiper" circular="{{true}}">
+        <swiper-item wx:for="{{information}}" class="container">
+            <view class="information"></view>
+        </swiper-item>
+    </swiper>
+</view>
+
+<view class="searchBar">
+    <image src="/images/search/searchIcon.svg" style="width:20px" mode="widthFix"></image>
+    
+</view>
+
+
+<view>
+    <text class="policy">隐私政策 ｜ 用户协议 ｜ 最终用户许可</text>
+</view>
