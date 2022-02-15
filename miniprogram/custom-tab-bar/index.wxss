@@ -4,11 +4,11 @@
 
 .tab-bar {
     position: fixed;
-    bottom: 0;
+    bottom: 1px;
     left: 0;
     right: 0;
-    height: 48px;
-    background: white;
+    height: 90px;
+    background: rgba(249, 249, 249, 0.94);
     /* background: #bdc3c7;  */
     /* background: -webkit-linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4)); */
     /* background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));  */
@@ -37,20 +37,28 @@
   }
   
   .tab-bar-item cover-image {
-    width: 27px;
-    height: 27px;
+    width: 24px;
+    height: 24px;
     transform-origin: center center;
     -webkit-transform-origin: center center;
   }
   
   .tab-bar-item cover-view {
-    font-size: 15px;
-    color: #3B353E;
-    font-weight: bolder;
+    /* font-family: PingFang HK; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+
+    text-align: center;
+    letter-spacing: 0.16px;
+
+    color: #8E8E93;
   }
 
   .tab-bar-item cover-view.on {
-    font-size: 25px;
+    /* font-size: 25px; */
+    color: #4F71BE;
   }
 
   .center-item {

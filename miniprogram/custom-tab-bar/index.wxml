@@ -1,17 +1,9 @@
 <!--custom-tab-bar/index.wxml-->
 <cover-view class="tab-bar">
+  <cover-view class="tab-bar-border"></cover-view>
   <block wx:for="{{list}}" wx:key="index">
-    <cover-view  class="tab-bar-item center-item" wx:if="{{ index == centerIndex }}" bindtap="add">
-      <block wx:if="{{ theme == 0 }}">
-        <cover-view class="circle">
-          <!-- <cover-image class="image" src="/images/tabBar/add.png"></cover-image> -->
-        </cover-view>
-      </block>
-      <block wx:else>
-        <cover-image class="gif" src="/images/tabBar/mango.gif"></cover-image>
-      </block>
-    </cover-view>
     <cover-view  class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+      <cover-image src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></cover-image>
       <cover-view class="text {{selected === index ? item.selectedIconPath : item.iconPath}}" class="{{ selected === index  ? 'on' : '' }}">
         {{ item.text }}
       </cover-view>

@@ -20,25 +20,15 @@ Component({
     color: "#7A7E83",
     selectedColor: "#3cc51f",
     list: [{
-      pagePath: "/pages/indexV2/index",
-      iconPath: "/images/tabBar/index.png",
-      selectedIconPath: "/images/tabBar/index_s.png",
-      text: "今天"
+      pagePath: "/pages/search/search",
+      iconPath: "/images/tabBar/search.svg",
+      selectedIconPath: "/images/tabBar/search_s.svg",
+      text: "搜索"
     }, {
-      pagePath: "/pages/square/square/square",
-      iconPath: "/images/tabBar/square.png",
-      selectedIconPath: "/images/tabBar/square_s.png",
-      text: "广场"
-    }, {
-      pagePath: "/pages/award/award/award",
-      iconPath: "/images/tabBar/award.png",
-      selectedIconPath: "/images/tabBar/award_s.png",
-      text: "奖励"
-    }, {
-      pagePath: "/pages/mineV2/mine",
-      iconPath: "/images/tabBar/mine.png",
-      selectedIconPath: "/images/tabBar/mine_s.png",
-      text: "我"
+      pagePath: "/pages/mine/mine",
+      iconPath: "/images/tabBar/mine2.svg",
+      selectedIconPath: "/images/tabBar/mine2_s.svg",
+      text: "我的"
     }],
   },
 
