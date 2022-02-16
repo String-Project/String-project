@@ -1,7 +1,8 @@
-<view class="head">
+<!-- 顶部 -->
+<view class="{{inputFocus == true ?  'headFocus': 'head'}}">
     <text class="stringChinese">弦计划</text>
     <text class="stringEnglish">Project String</text>
-    <swiper hidden="{{swiperHidden}}" autoplay="{{true}}" previous-margin="20px" next-margin="20px"
+    <swiper hidden="{{inputFocus}}" autoplay="{{true}}" previous-margin="38.46rpx" next-margin="38.46rpx"
             vertical="{{false}}" interval="3000" duration="1500" class="swiper" circular="{{true}}">
         <swiper-item wx:for="{{information}}" class="container">
             <view class="information"></view>
@@ -9,12 +10,23 @@
     </swiper>
 </view>
 
-<view class="searchBar">
-    <image src="/images/search/searchIcon.svg" style="width:20px" mode="widthFix"></image>
-    
+<!-- 搜索框 -->
+<!-- 底部的伪搜索框（不做真实输入） -->
+<view class="searchBar" hidden="{{inputFocus}}">
+    <image src="/images/search/searchIcon.svg" style="padding-left:30.77rpx;padding-right:23.08rpx;width:38.46rpx" mode="widthFix"></image>
+    <view style="width:565.38rpx;height:100%;display:flex;align-items:center" bindtap="bindInputFocus">
+        <view wx:if="{{inputValue == ''}}" class="placeholder">查找同事、校友、同行</view>
+        <view wx:else class="inputText">{{inputValue}}</view>
+    </view>
+</view>
+<!-- 顶部的搜索框（实现真实输入） -->
+<view class="searchBarFocus" hidden="{{!inputFocus}}">
+    <image src="/images/search/searchIcon.svg" style="padding-left:30.77rpx;padding-right:23.08rpx;width:38.46rpx" mode="widthFix"></image>
+    <input placeholder="查找同事、校友、同行" placeholder-class="placeholder" class="inputText" focus="{{inputFocus}}" bindblur="bindInputBlur"
+           value="{{inputValue}}" bindinput="bindInput"/>
 </view>
 
-
+<!-- 隐私政策等 -->
 <view>
     <text class="policy">隐私政策 ｜ 用户协议 ｜ 最终用户许可</text>
 </view>

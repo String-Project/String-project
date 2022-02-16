@@ -1,6 +1,7 @@
 {
    "pages": [
       "pages/search/search",
+      "pages/mine/mine",
       "pages/square/square/square",
       "pages/mineV2/mine",
       "pages/indexV2/index",
@@ -36,7 +37,7 @@
             "text": "搜索"
          },
          {
-            "pagePath": "pages/square/square/square",
+            "pagePath": "pages/mine/mine",
             "iconPath": "/images/tabBar/square.png",
             "selectedIconPath": "/images/tabBar/square_s.png",
             "text": "我的"
