@@ -4,6 +4,7 @@ Page({
         // 搜索相关的data
         inputFocus: false,
         inputValue: '',
+        searchNum: "0",
         // Swiper相关的data
         swiperHidden: false,
         information: [1, 2, 3]
