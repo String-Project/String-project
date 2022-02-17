@@ -21,13 +21,13 @@ Component({
     selectedColor: "#3cc51f",
     list: [{
       pagePath: "/pages/search/search",
-      iconPath: "/images/tabBar/search.svg",
-      selectedIconPath: "/images/tabBar/search_s.svg",
+      iconPath: "/images/tabBar/search.png",
+      selectedIconPath: "/images/tabBar/search_s.png",
       text: "搜索"
     }, {
       pagePath: "/pages/mine/mine",
-      iconPath: "/images/tabBar/mine2.svg",
-      selectedIconPath: "/images/tabBar/mine2_s.svg",
+      iconPath: "/images/tabBar/mine2.png",
+      selectedIconPath: "/images/tabBar/mine2_s.png",
       text: "我的"
     }],
   },

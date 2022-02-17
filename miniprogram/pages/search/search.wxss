@@ -1,3 +1,266 @@
 page {
     background: #FFFFFF;
 }
+/* 顶部 */
+.head {
+    position: absolute;
+    width: 100vw;
+    height: 34.95vh;
+
+    z-index: 1;
+    background: #4F71BE;
+}
+.headFocus {
+    position: absolute;
+    width: 100vw;
+    height: 19.79vh;
+
+    z-index: 1;
+    background: #4F71BE;
+}
+/* 弦计划中文 */
+.stringChinese {
+    position: absolute;
+    width: 34.87vw;
+    height: 4.15vh;
+    left: 6.15vw;
+    top: 6.75vh;
+
+    /* font-family: PingFang SC; */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.96vh;
+    line-height: 4.15vh;
+
+    color: #FFFFFF;
+}
+/* 弦计划英文 */
+.stringEnglish {
+    position: absolute;
+    width: 55.13vw;
+    height: 3.2vh;
+    left: 6.15vw;
+    top: 10.9vh;
+
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.37vh;
+    line-height: 3.2vh;
+
+    color: #FFFFFF; 
+}
+/* Swiper相关的样式 */
+.swiper {
+    position: absolute;
+    height: 12.91vh;
+    top: 16.94vh;
+    width: 100vw;
+}
+.information {
+    height: 12.91vh;
+    width: 87.69vw;
+    background: #7293DD;
+    border-radius: 2.56vw;
+}
+/* 搜索框 */
+.searchBar {
+    position: absolute;
+    width: 87.69vw;
+    height: 5.57vh;
+    left: 6.15vw;
+    top: 32.11vh;
+
+    z-index: 2;
+    background: #FFFFFF;
+    border: 1px solid #4F71BE;
+    box-sizing: border-box;
+    border-radius: 2.56vw;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;    /**子view垂直居中*/
+    vertical-align: center; /**垂直居中*/
+}
+.searchBarFocus {
+    position: absolute;
+    width: 87.69vw;
+    height: 5.57vh;
+    left: 6.15vw;
+    top: 16.94vh;
+
+    z-index: 2;
+    background: #FFFFFF;
+    border: 1px solid #4F71BE;
+    box-sizing: border-box;
+    border-radius: 2.56vw;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;    /**子view垂直居中*/
+    vertical-align: center; /**垂直居中*/
+}
+.placeholder {
+    /* font-family: PingFang SC; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.78vh;
+    line-height: 2.49vh;
+
+    color: #C4C4C4;
+}
+.inputText {
+    /* font-family: PingFang SC; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.78vh;
+    line-height: 2.49vh;
+
+    color: rgba(0, 0, 0, 0.9);
+}
+/* 大家都在搜 */
+.allSearchView {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 87.69vw;
+    height: 2.49vh;
+    left: 6.15vw;
+    top: 39.93vh;
+}
+.allSearch {
+    width: 21.79vw;
+    /* font-family: PingFang SC; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.78vh;
+    line-height: 2.49vh;
+
+    color: #979797;
+}
+/* 换一批 */
+.changeBatchView {
+    display: flex;
+    width: 21.79vw;
+    justify-content: space-between;
+    align-items: center;
+}
+.changeBatchIcon {
+    margin-left: 3.85vw;
+    width: 33.69rpx;
+    height: 33.69rpx;
+}
+.changeBatchText {
+    /* font-family: PingFang SC; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.78vh;
+    line-height: 2.49vh;
+
+    text-align: right;
+
+    color: #979797;
+}
+/* 搜索提示 */
+.searchTipsView {
+    position: absolute;
+    width: 100vw;
+    height: 2.13vh;
+    left: 0;
+    top: 23.93vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchTips {
+    /* font-family: Noto Sans; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.54vh;
+    line-height: 2.13vh;
+    text-align: center;
+
+    color: #DADADA;
+}
+/* 搜索历史 */
+.searchHistoryView {
+    position: absolute;
+    width: 85px;
+    height: 21px;
+    left: 24px;
+    top: 239px;
+}
+.searchHistoryText {
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 21px;
+
+    color: #979797;
+}
+/* 相关结果 */
+.resultView {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 87.69vw;
+    height: 2.49vh;
+    left: 6.15vw;
+    top: 24.76vh;
+}
+.result {
+    width: 100%;
+    /* font-family: PingFang SC; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.78vh;
+    line-height: 2.49vh;
+
+    color: #979797;
+}
+/* 筛选 */
+.selectView {
+    display: flex;
+    width: 21.79vw;
+    justify-content: space-between;
+    align-items: center;
+}
+.selectIcon {
+    margin-left: 3.85vw;
+    width: 33.69rpx;
+    height: 33.69rpx;
+}
+.selectText {
+    /* font-family: PingFang SC; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.78vh;
+    line-height: 2.49vh;
+
+    text-align: right;
+
+    color: #979797;
+}
+/* 隐私政策等 */
+.policy {
+    position: absolute;
+    width: 74.36vw;
+    height: 2.13vh;
+    left: 12.82vw;
+    top: 81.75vh;
+
+    /* font-family: Noto Sans; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.54vh;
+    line-height: 2.13vh;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #516798;
+}

@@ -1,0 +1,71 @@
+<!-- 顶部 -->
+<view class="{{inputFocus == true ?  'headFocus': 'head'}}">
+    <text class="stringChinese">弦计划</text>
+    <text class="stringEnglish">Project String</text>
+    <swiper hidden="{{inputFocus}}" autoplay="{{true}}" previous-margin="38.46rpx" next-margin="38.46rpx"
+            vertical="{{false}}" interval="3000" duration="1500" class="swiper" circular="{{true}}">
+        <swiper-item wx:for="{{information}}" class="container">
+            <view class="information"></view>
+        </swiper-item>
+    </swiper>
+</view>
+
+<!-- 搜索框 -->
+<!-- 底部的伪搜索框（不做真实输入） -->
+<view class="searchBar" hidden="{{inputFocus}}">
+    <image src="/images/search/searchIcon.svg" style="padding-left:30.77rpx;padding-right:23.08rpx;width:38.46rpx" mode="widthFix"></image>
+    <view style="width:565.38rpx;height:100%;display:flex;align-items:center" bindtap="bindInputFocus">
+        <view wx:if="{{inputValue == ''}}" class="placeholder">查找同事、校友、同行</view>
+        <view wx:else class="inputText">{{inputValue}}</view>
+    </view>
+</view>
+<!-- 顶部的搜索框（实现真实输入） -->
+<view class="searchBarFocus" hidden="{{!inputFocus}}">
+    <image src="/images/search/searchIcon.svg" style="padding-left:30.77rpx;padding-right:23.08rpx;width:38.46rpx" mode="widthFix"></image>
+    <input placeholder="查找同事、校友、同行" placeholder-class="placeholder" class="inputText" focus="{{inputFocus}}" bindblur="bindInputBlur"
+           value="{{inputValue}}" bindinput="bindInput"/>
+</view>
+
+<!-- 未选定状态下的“大家都在搜” -->
+<view hidden="{{inputFocus}}" class="allSearchView">
+    <!-- 大家都在搜及换一批 -->
+    <view class="allSearch">大家都在搜</view>
+    <view bindtap="" class="changeBatchView">
+        <image src="/images/search/changeBatch.svg" mode="widthFix" class="changeBatchIcon"/>
+        <text class="changeBatchText">换一批</text>
+    </view>
+    <!-- 大家都在搜的结果 -->
+</view>
+
+<!-- 选定状态下的“搜索历史”和“搜索结果” -->
+<view hidden="{{!inputFocus}}">
+    <!-- 未输入值时搜索历史 -->
+    <block wx:if="{{inputValue == ''}}">
+        <!-- 搜索提示文字 -->
+        <view class="searchTipsView">
+            <text class="searchTips">使用“+”进行组合查询 如: 浙江大学+赵信</text>
+        </view>
+        <!-- 搜索历史文字 -->
+        <view  class="searchHistoryView">
+            <text class="searchHistoryText">搜索历史</text>
+        </view>
+        <!-- 搜索历史信息 -->
+    </block>
+    <!-- 搜索值时找到的结果 -->
+    <block wx:if="{{inputValue != ''}}">
+        <!-- 相关结果及筛选 -->
+        <view class="resultView">
+            <view class="result">为您找到的相关结果{{searchNum}}个</view>
+            <view bindtap="" class="selectView">
+                <image src="/images/search/selectIcon.svg" mode="widthFix" class="changeBatchIcon"/>
+                <text class="selectText">筛选</text>
+            </view>
+        </view>
+        <!-- 相关结果 -->
+    </block>
+</view>
+
+<!-- 隐私政策等 -->
+<view>
+    <text class="policy">隐私政策 ｜ 用户协议 ｜ 最终用户许可</text>
+</view>
