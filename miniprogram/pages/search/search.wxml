@@ -27,14 +27,26 @@
 </view>
 
 <!-- 未选定状态下的“大家都在搜” -->
-<view hidden="{{inputFocus}}" class="allSearchView">
+<view hidden="{{inputFocus}}">
     <!-- 大家都在搜及换一批 -->
-    <view class="allSearch">大家都在搜</view>
-    <view bindtap="" class="changeBatchView">
-        <image src="/images/search/changeBatch.svg" mode="widthFix" class="changeBatchIcon"/>
-        <text class="changeBatchText">换一批</text>
+    <view class="allSearchView">
+        <view class="allSearch">大家都在搜</view>
+        <view bindtap="" class="changeBatchView">
+            <image src="/images/search/changeBatch.svg" mode="widthFix" class="changeBatchIcon"/>
+            <text class="changeBatchText">换一批</text>
+        </view>
     </view>
-    <!-- 大家都在搜的结果 -->
+    <!-- 大家都在搜的结果（暂时使用虚假数据） -->
+    <view class="allSearchResultView">
+        <block wx:for="{{allSearchResult}}">
+            <view class="allSearchResultItem">
+                <image src="{{item.iconPath}}" mode="widthFix" style="width:44.23rpx;height:44.23rpx;padding-left:19.23rpx;padding-right:19.23rpx;"/>
+                <view class="allSearchResultText">
+                    {{item.name}}
+                </view>
+            </view>
+        </block>
+    </view>
 </view>
 
 <!-- 选定状态下的“搜索历史”和“搜索结果” -->
@@ -49,7 +61,16 @@
         <view  class="searchHistoryView">
             <text class="searchHistoryText">搜索历史</text>
         </view>
-        <!-- 搜索历史信息 -->
+        <!-- 搜索历史信息（暂时使用虚假数据） -->
+        <view class="historyResultView">
+            <block wx:for="{{historyResult}}">
+                <view class="allSearchResultItem"> <!--这里使用和大家都在搜一样的样式-->
+                    <view class="allSearchResultText">
+                        {{item}}
+                    </view>
+                </view>
+            </block>
+        </view>
     </block>
     <!-- 搜索值时找到的结果 -->
     <block wx:if="{{inputValue != ''}}">
@@ -61,7 +82,29 @@
                 <text class="selectText">筛选</text>
             </view>
         </view>
-        <!-- 相关结果 -->
+        <!-- 相关结果（暂时使用虚假结果） -->
+        <view class="searchResultView">
+            <block wx:for="{{searchResult}}">
+                <view class="searchResultItem">
+                    <view class="iconCircle">
+                        <image src="/images/search/emptyAvatar.svg" mode="widthFix" style="width:42.31rpx"/>
+                    </view>
+                    <view class="informationView">
+                        <view class="information1">{{item.name}}</view>
+                        <view class="information2" wx:if="{{item.job != ''}}">{{item.job}}</view>
+                        <view class="information3" wx:if="{{item.location != ''}}">
+                            <image src="/images/search/location.svg" mode="widthFix" style="width:19.23rpx;padding-right:7.69rpx"/>
+                            <view class="information3Text">{{item.location}}</view>
+                        </view>
+                        <view class="information3" wx:if="{{item.company != ''}}">
+                            <image src="{{item.companyIcon}}" mode="heightFix" style="height:15.81rpx;padding-right:7.69rpx"/>
+                            <view class="information3Text">{{item.company}}</view>
+                        </view>
+                    </view>
+                    <image src="/images/search/stroke.svg" mode="widthFix" style="width:15.38rpx"/>
+                </view>
+            </block>
+        </view>
     </block>
 </view>
 

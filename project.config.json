@@ -41,7 +41,7 @@
   },
   "appid": "wx8d60424db5f9bcc3",
   "projectname": "WeDaily",
-  "libVersion": "2.6.2",
+  "libVersion": "2.22.0",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
