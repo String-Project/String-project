@@ -26,7 +26,8 @@ const collectionList = [
     "FormID",   // 表单ID
     "Article",  // 文章
     "Award",    // 奖励
-    "Info"       //个人信息
+    "Info" ,      //个人信息
+    "Apply"       //申请信息
 ]
 
 const command = db.command;

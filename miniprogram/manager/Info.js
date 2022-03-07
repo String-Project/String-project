@@ -47,7 +47,7 @@ const find = (_openid) => {
 }
 
 /**
- * 添加习惯
+ * 添加信息
  */
 const add = (data) => {
     return new Promise((resolve, reject) => {
