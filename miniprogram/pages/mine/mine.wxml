@@ -1,16 +1,29 @@
 <!-- 顶部 -->
-<view class="head">
+
+<!-- <view class="head">
     <block>
         <view>
             <view class="iconCircle">
                 <image src="/images/mine/emptyAvatar.svg" mode="widthFix" style="width:42.31rpx"/>
             </view>
             <text class="stringEnglish">郑山行</text>
-        </view>  
+        </view>
+        <view class="nav">></view>  
     </block>   
+</view> -->
+<view class="clear"></view>
+<view class="amountBg">
+    <view class="img"><image src="/images/mine/emptyAvatar.svg" style="width:49px;height:47px;">
+    </image></view>
+    <view class="account">
+        <!-- <view>{{userInfo.nickName}}</view> -->
+        <view>郑山行</view>
+    </view>
+    <view class="nav"><text>编辑 </text>></view>
 </view>
 
-<view class="resultView">
+
+<!-- <view class="resultView">
         <view class="searchResultView">
                 <view class="searchResultItem">
                     <view class="iconCircle">
@@ -20,4 +33,44 @@
                     <image src="/images/search/stroke.svg" mode="widthFix" style="width:15.38rpx"/>
                 </view>
         </view>
-</view> 
+</view>  -->
+
+
+
+
+<view class="hr"></view>
+<view class="item">
+    <view class="icon">
+        <image src="/images/mine/emptyAvatar.svg" style="width:22px;height:21px;"></image>
+    </view>
+    <view class="itemName">
+        <view>我的好友</view>
+    </view>
+    <view class="right">
+        <text class="opr">12</text>></view>
+</view>
+
+<view class="hr"></view>
+<view class="item">
+    <view class="icon">
+        <image src="/images/mine/emptyAvatar.svg" style="width:22px;height:21px;"></image>
+    </view>
+    <view class="itemName">
+        <view>我的申请</view>
+    </view>
+    <view class="right" bindtap="grabTicket">
+    <text class="opr">2</text>></view>
+</view>
+
+<view class="hr"></view>
+<view class="item">
+    <view class="icon">
+        <image src="/images/mine/emptyAvatar.svg" style="width:22px;height:21px;"></image>
+    </view>
+    <view class="itemName">
+        <view>我收到的申请</view>
+    </view>
+    <view class="right">
+        <text class="opr">5</text>></view>
+</view>
+

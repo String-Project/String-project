@@ -1,25 +1,35 @@
+
+var App=getApp()
+
 Page({
     // 页面数据
     data : {
+
+        userInfo:{
+            nickname: "山行"
+        },        
+
         // 搜索相关的data
         inputFocus: false, // 聚焦
         inputValue: '', // 输入值
-        allSearchResult: [
-            {iconPath: "/images/search/defaultAvatar.svg", name: "Bill Gates"}, 
-            {iconPath: "/images/search/defaultAvatar.svg", name: "周鸿祎"}, 
-            {iconPath: "/images/search/defaultAvatar.svg", name: "Xiaoping (Bob) Xu"},
-            {iconPath: "/images/search/defaultAvatar.svg", name: "张三"},
-            {iconPath: "/images/search/defaultAvatar.svg", name: "欧阳娜娜"},
-            {iconPath: "/images/search/defaultAvatar.svg", name: "Harper Seven Becklyxxxx"},
-        ], // 大家都在搜
- 
+        
         searchNum: "4", // 搜索结果个数
         // Swiper相关的data
         swiperHidden: false,
         information: [1, 2, 3]
 
     },
-    
+    onLoad:function(options){
+        var that=this
+        //调用应用实例的方法获取全局数据
+        App.getUserInfo(function(userInfo){
+            console.log(userInfo);
+            //更新数据
+            that.setData({
+            userInfo:userInfo
+            })
+        })
+    },
     // onShow函数
     onShow: function() {
 
@@ -35,25 +45,8 @@ Page({
           });
     },
 
-    // 当点击伪搜索框时触发
-    bindInputFocus: function(e) {
-        this.setData({
-            inputFocus: true,
-        });
-    },
 
-    // 当真搜索框失去焦点时触发
-    bindInputBlur: function(e) {
-        this.setData({
-            inputFocus:false,
-        });
-    },
 
-    // 输入完成触发
-    bindInput: function(e) {
-        var val = e.detail.value;
-        this.setData({
-            inputValue: val
-        });
-    }
 })
+
+
