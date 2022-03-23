@@ -2,9 +2,7 @@ Page({
     // 页面数据
     data : {
         // 搜索相关的data
-        searchState: false, // 搜索状态（第二三界面）
         inputFocus: false, // 聚焦
-        inputConfirm: false, // 输入确认
         inputValue: '', // 输入值
         allSearchResult: [
             {iconPath: "/images/search/defaultAvatar.svg", name: "Bill Gates"}, 
@@ -42,8 +40,6 @@ Page({
         
         this.setData({
             page: 0,
-            inputConfirm: false,
-            inputFocus: false
           });
     },
 
@@ -51,27 +47,14 @@ Page({
     bindInputFocus: function(e) {
         this.setData({
             inputFocus: true,
-            searchState: true
         });
     },
 
-    // 当退出搜索结果时触发
-    bindInputEnd: function(e) {
-        if (this.data.inputFocus) {
-            this.setData({
-                inputConfirm: false,
-                inputFocus: false,
-                searchState: true,
-            });
-        }
-        else {
-            this.setData({
-                inputConfirm: false,
-                inputFocus: false,
-                searchState: false,
-            });
-        }
-        
+    // 当真搜索框失去焦点时触发
+    bindInputBlur: function(e) {
+        this.setData({
+            inputFocus:false,
+        });
     },
 
     // 输入完成触发
@@ -80,21 +63,5 @@ Page({
         this.setData({
             inputValue: val
         });
-    },
-
-    // 输入完成触发
-    bindConfirm: function(e) {
-        if (this.data.inputValue == '') {
-            this.setData({
-                inputConfirm: false,
-                inputFocus: false
-            });
-        }
-        else {
-            this.setData({
-                inputConfirm: true,
-                inputFocus: false
-            });
-        }
     }
 })

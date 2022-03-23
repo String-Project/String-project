@@ -2,6 +2,7 @@
    "pages": [
       "pages/search/search",
       "pages/mine/mine",
+      "pages/application_received/application_received",
       "pages/square/square/square",
       "pages/mineV2/mine",
       "pages/indexV2/index",

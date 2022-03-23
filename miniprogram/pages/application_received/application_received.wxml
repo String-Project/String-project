@@ -1,0 +1,31 @@
+<!-- 顶部 -->
+
+<view class="amountBg">
+    <!-- <view class="nav"></view> -->
+    <view class="Title">我收到的申请</view>    
+</view>
+
+<view class="searchResultView">
+            <block wx:for="{{searchResult}}">
+                <view class="searchResultItem">
+                    <view class="iconCircle">
+                        <image src="/images/search/emptyAvatar.svg" mode="widthFix" style="width:42.31rpx"/>
+                    </view>
+                    <view class="informationView">
+                        <view class="information1">{{item.name}}</view>
+                        <view class="information2" wx:if="{{item.job != ''}}">{{item.job}}</view>
+                        <view class="information3" wx:if="{{item.location != ''}}">
+                            <image src="/images/search/location.svg" mode="widthFix" style="width:19.23rpx;padding-right:7.69rpx"/>
+                            <view class="information3Text">{{item.location}}</view>
+                        </view>
+                        <view class="information3" wx:if="{{item.company != ''}}">
+                            <image src="{{item.companyIcon}}" mode="heightFix" style="height:15.81rpx;padding-right:7.69rpx"/>
+                            <view class="information3Text">{{item.company}}</view>
+                        </view>
+                    </view>
+                    <image src="/images/search/stroke.svg" mode="widthFix" style="width:15.38rpx"/>
+                </view>
+            </block>
+        </view>
+
+
