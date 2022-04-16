@@ -44,26 +44,23 @@ Page({
             page: 1,
           });
     },
-    gotoEdit:function(){
+    gotoBasic:function(){
         wx.navigateTo({
-            url: '/pages/information/mainPage/mainPage',
+            url: '/pages/information/basicInformation/basicInformation',
           })
     },
-    gotoFriend:function(){
-        wx.navigateTo({
-            url: '/pages/myFriend/myFriend',
-          })
-    },
-    gotoApplication:function(){
-        wx.navigateTo({
-            url: '/pages/myApplication/myApplication',
-          })
-    },
-    gotoReceive : function () {
-        wx.navigateTo({
-          url: '/pages/applicationReceived/applicationReceived',
+    gotoWork:function(){
+      wx.navigateTo({
+          url: '/pages/information/workingExperience/workingExperience',
         })
+  },
+    gotoEducation:function(){
+        wx.navigateTo({
+            url: '/pages/information/educationExperience/educationExperience',
+          })
     }
+    
+
 
 
 })

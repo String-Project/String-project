@@ -1,0 +1,123 @@
+/* pages/publish/publish.wxss */
+.send-publish{
+  width: 100%;
+  padding-top: 10rpx;
+  color: #757575;
+  height: 75rpx;
+  background-color: rgba(246,232,154,0.678);
+  line-height: 60rpx;
+}
+.page{
+ padding-left: 25rpx;
+ padding-right: 25rpx;
+ padding-top: 50rpx;
+ 
+}
+.text{
+ width: 100%;
+ margin-bottom: 3px;
+ font-size: 12pt;
+ font-weight: bold;
+ padding-left: 25rpx;
+ padding-right: 25rpx;
+ padding-bottom: 25rpx;
+ 
+}
+.image{
+ width:25%;
+ height: 25%;
+ padding: 5px
+}
+.moment_img{
+ width: 70px;
+ height: 70px;
+}
+.image_content{
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ margin-bottom: 75px
+}
+/**/
+.page .add-form{
+    background: #fff;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.form-item{ 
+    height: 70rpx;
+    padding-left: 25rpx;
+    /*border-bottom: 1px solid #dadada;*/
+    border-top: 1px solid #dadada;
+    display: -webkit-box;
+    /*align-items: center;*/
+    padding-top: 30rpx;
+    padding-right: 25rpx;
+    font-size: 12pt;
+}
+.input{
+    flex: 1;
+    height: 44rpx;
+    line-height: 44rpx;
+    overflow: hidden;
+}
+.form-default{
+    border-bottom: 1px solid #dadada;
+    height: 96rpx;
+    background: #fff;
+    padding-top: 25rpx;
+    font-size: 12pt;
+}
+
+.message-input{
+  background-color:#fff;
+  font-size:12pt;
+  width: 92%;
+  height:175px;
+  border: 2px solid rgba(141, 68, 32, 0.767);
+  border-right: 2px solid rgba(141, 68, 32, 0.767);
+  border-radius: 5px;
+  padding-top: 35rpx;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  padding-bottom: 25rpx;
+  margin: 0 auto;
+  display: block;
+  line-height: 40rpx;
+  flex: 1;
+  overflow: hidden;
+}
+
+.message-content{
+  font-size: 12pt;
+  color:#757575; 
+}
+
+.send-publish{
+  width: 100%;
+  padding-top: 7rpx;
+  color: #444343;
+  height: 75rpx;
+  background-color: #E3BD4A;
+  border: 2px solid rgba(141, 68, 32, 0.767);
+  line-height: 60rpx;
+  font-weight: bold
+}
+
+.default-input{
+    margin: 0 auto;
+    display: block;
+    width: 240rpx;
+    height: 40rpx;
+    padding-left: 50rpx;
+    line-height: 40rpx;
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/checkbox-sed825af9d3-a6b8540d42.png) 1rpx -448rpx no-repeat;
+    background-size: 38rpx 486rpx;
+    font-size: 12pt;
+}
+
+.default-input.selected{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/checkbox-sed825af9d3-a6b8540d42.png) 0 -192rpx no-repeat;
+    background-size: 38rpx 486rpx;
+}

@@ -11,7 +11,9 @@
         <view class="nav">></view>  
     </block>   
 </view> -->
-<view class="clear"></view>
+<view class="amountBg">
+    <view class="Title">个人资料</view>    
+</view> 
 <view class="amountBg">
     <view class="img"><image src="/images/mine/emptyAvatar.svg" style="width:49px;height:47px;">
     </image></view>
@@ -19,7 +21,7 @@
         <!-- <view>{{userInfo.nickName}}</view> -->
         <view>郑山行</view>
     </view>
-    <view class="nav" bindtap="gotoEdit"><text>编辑 </text>></view>
+    <view class="nav" bindtap="gotoBasic"><text>编辑 </text>></view>
 </view>
 
 
@@ -44,10 +46,10 @@
         <image src="/images/mine/emptyAvatar.svg" style="width:22px;height:21px;"></image>
     </view>
     <view class="itemName">
-        <view>我的好友</view>
+        <view>工作经历</view>
     </view>
-    <view class="right" bindtap="gotoFriend">
-        <text class="opr">12</text>></view>
+    <view class="right" bindtap="gotoWork">
+        <text class="opr"></text>></view>
 </view>
 
 <view class="hr"></view>
@@ -56,10 +58,10 @@
         <image src="/images/mine/emptyAvatar.svg" style="width:22px;height:21px;"></image>
     </view>
     <view class="itemName">
-        <view>我的申请</view>
+        <view>教育经历</view>
     </view>
-    <view class="right" bindtap="gotoApplication">
-    <text class="opr">2</text>></view>
+    <view class="right" bindtap="gotoEducation">
+    <text class="opr"></text>></view>
 </view>
 
 <view class="hr"></view>
@@ -68,10 +70,9 @@
         <image src="/images/mine/emptyAvatar.svg" style="width:22px;height:21px;"></image>
     </view>
     <view class="itemName">
-        <view>我收到的申请</view>
+        <view>联系方式</view>
     </view>
-    <view class="right" bindtap="gotoReceive">
-        <text class="opr">5</text>></view>
+
 
 </view>
 

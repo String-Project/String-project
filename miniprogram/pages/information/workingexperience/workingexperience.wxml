@@ -1,0 +1,29 @@
+<!--pages/information/workingexperience/workingexperience.wxml-->
+<text>workingExperience</text>
+<view class='page'>
+    <view class="add-form">
+
+       <textarea class="message-input" value="{{address.note}}" placeholder="短信粘贴" placeholder-class="message-content" maxlength="{{maxlength}}" focus="{{focus}}" auto-height="{{auto-height}}" show-confirm-bar="{{show-confirm-bar}}"></textarea>
+
+        <!-- <view class="form-default">
+            <text bindtap="bindIsDefault" class="default-input {{address.is_default == 1 ? 'selected' : ''}}">设为默认地址</text>
+        </view> -->
+
+    <view class="kongyihang">
+        <text>\n</text>
+    </view>    
+
+    </view>
+<!-- /// -->
+
+    <!-- <view class="image_content">
+        <view class='image' wx:for="{{img_url}}">
+            <image class="moment_img" src="{{item}}"></image>
+        </view>
+        <view class='image' style='display:{{hideAdd?"none":"block"}}'>
+            <image bindtap="chooseimage" class="moment_img" src='../../images/add.png'></image>
+        </view>
+    </view> -->
+
+    <button class='send-publish' bindtap="send">发布</button>
+</view>

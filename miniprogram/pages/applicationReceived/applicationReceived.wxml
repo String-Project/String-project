@@ -1,9 +1,11 @@
 <!-- 顶部 -->
 
 <view class="amountBg">
-    <!-- <view class="nav"></view> -->
+    <view class="nav"></view>
+    <!-- <view><text>"<"</text></view> -->
     <view class="Title">我收到的申请</view>    
-</view>
+</view> 
+
 
 <view class="searchResultView">
             <block wx:for="{{searchResult}}">
