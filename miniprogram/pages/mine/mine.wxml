@@ -1,23 +1,14 @@
 <!-- 顶部 -->
-
-<!-- <view class="head">
-    <block>
-        <view>
-            <view class="iconCircle">
-                <image src="/images/mine/emptyAvatar.svg" mode="widthFix" style="width:42.31rpx"/>
-            </view>
-            <text class="stringEnglish">郑山行</text>
-        </view>
-        <view class="nav">></view>  
-    </block>   
-</view> -->
 <view class="clear"></view>
 <view class="amountBg">
-    <view class="img"><image src="/images/mine/emptyAvatar.svg" style="width:49px;height:47px;">
+    <!--view class="img"><image src="/images/mine/emptyAvatar.svg"
+        style="width:49px;height:47px;"-->
+    <view class="img"><image src="{{userInfo.avatar}}"
+        style="width:49px;height:47px;clip-path: circle(55rpx at center);">    
     </image></view>
     <view class="account">
         <!-- <view>{{userInfo.nickName}}</view> -->
-        <view>郑山行</view>
+        <view>{{userInfo.nickname}}</view>
     </view>
     <view class="nav"><text>编辑 </text>></view>
 </view>

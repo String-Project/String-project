@@ -39,7 +39,8 @@ Component({
           });
         } else {
           wx.switchTab({
-            url: '/pages/indexV2/index',
+            //url: '/pages/indexV2/index',
+            url:'/pages/search/search', 
           });
         }
       } else {

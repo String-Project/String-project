@@ -1,3 +1,4 @@
+const app = getApp();
 Page({
     // 页面数据
     data : {
@@ -8,7 +9,7 @@ Page({
         inputValue: '', // 输入值
         allSearchResult: [
             {iconPath: "/images/search/defaultAvatar.svg", name: "Bill Gates"}, 
-            {iconPath: "/images/search/defaultAvatar.svg", name: "周鸿祎"}, 
+            {iconPath: "/images/search/defaultAvatar.svg", name: "周鸿伟"}, 
             {iconPath: "/images/search/defaultAvatar.svg", name: "Xiaoping (Bob) Xu"},
             {iconPath: "/images/search/defaultAvatar.svg", name: "张三"},
             {iconPath: "/images/search/defaultAvatar.svg", name: "欧阳娜娜"},
@@ -30,8 +31,27 @@ Page({
 
     },
     
+    // onLoad函数
+    onLoad: function (options) {
+        var that = this
+        // 登录态
+        if (app.globalData.userInfo == null || app.globalData.userInfo == "") {
+          wx.redirectTo({
+            url: '/pages/loginV2/login',
+          });
+          return ;
+        }
+        // 用户信息
+        that.setData({
+          userInfo: app.globalData.userInfo,
+        });
+    },
+
+
+
     // onShow函数
     onShow: function() {
+
 
         if (typeof this.getTabBar === 'function' && this.getTabBar()) {
             this.getTabBar().setData({
@@ -49,6 +69,8 @@ Page({
 
     // 当点击伪搜索框时触发
     bindInputFocus: function(e) {
+
+        
         this.setData({
             inputFocus: true,
             searchState: true

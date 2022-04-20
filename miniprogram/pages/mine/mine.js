@@ -1,13 +1,13 @@
-
-var App=getApp()
+const app=getApp()
 
 Page({
     // 页面数据
     data : {
 
-        userInfo:{
-            nickname: "山行"
-        },        
+        userInfo:null, 
+        hasUserInfo: false,
+        canIUseGetUserProfile: false,
+        userImage:"",     
 
         // 搜索相关的data
         inputFocus: false, // 聚焦
@@ -19,17 +19,10 @@ Page({
         information: [1, 2, 3]
 
     },
-    onLoad:function(options){
-        var that=this
-        //调用应用实例的方法获取全局数据
-        App.getUserInfo(function(userInfo){
-            console.log(userInfo);
-            //更新数据
-            that.setData({
-            userInfo:userInfo
-            })
-        })
-    },
+
+    
+    
+
     // onShow函数
     onShow: function() {
 
@@ -45,7 +38,13 @@ Page({
           });
     },
 
-
+    onLoad:function(options){
+        var that=this
+        // 用户信息
+        that.setData({
+            userInfo: app.globalData.userInfo,
+        });
+    },
 
 })
 
