@@ -1,0 +1,51 @@
+<view class='page'>
+    <textarea class='text' bindinput="input" placeholder="快递简要描述，不少于{{minContentLength}}字" maxlength='{{maxContentLength}}' show-confirm-bar='false' auto-height/> 
+
+<!-- /// -->
+    <view class="add-form">
+        <view class="form-item">
+            <input class="input" bindinput="bindinputName" placeholder="快递收货人名" value="{{address.author_parcel_name}}" auto-focus/>
+        </view>
+        
+        <view class="form-item">
+          <input class="input" bindinput="bindinputBlockNum" placeholder="投递区域" value="{{address.blockNum}}" auto-focus/>
+            <!--先改简了 <input class="input" value="{{address.full_region}}" disabled="true" bindtap="chooseRegion" placeholder="楼号"/> -->
+        </view>
+        <view class="form-item">
+            <input class="input" bindinput="bindinputPickup_code" placeholder="取货码" value="{{address.Pickup_code}}"/>
+        </view>
+         <view class="form-item">
+            <input class="input" bindinput="bindinputAddress" value="{{address.address}}" placeholder="详细交接地址"/>
+        </view>
+        <view class="form-item">
+            <input class="input" bindinput="bindinputMobile" value="{{address.mobile}}" placeholder="手机号码"/>
+        </view>
+       
+       <!-- <view class="form-item">
+            <input class="input" bindinput="bindinputNote" value="{{address.note}}" placeholder="短信粘贴" />
+        </view> -->
+
+       <textarea class="message-input" value="{{address.note}}" placeholder="短信粘贴" placeholder-class="message-content" maxlength="{{maxlength}}" focus="{{focus}}" auto-height="{{auto-height}}" show-confirm-bar="{{show-confirm-bar}}"></textarea>
+
+        <!-- <view class="form-default">
+            <text bindtap="bindIsDefault" class="default-input {{address.is_default == 1 ? 'selected' : ''}}">设为默认地址</text>
+        </view> -->
+
+    <view class="kongyihang">
+        <text>\n</text>
+    </view>    
+
+    </view>
+<!-- /// -->
+
+    <!-- <view class="image_content">
+        <view class='image' wx:for="{{img_url}}">
+            <image class="moment_img" src="{{item}}"></image>
+        </view>
+        <view class='image' style='display:{{hideAdd?"none":"block"}}'>
+            <image bindtap="chooseimage" class="moment_img" src='../../images/add.png'></image>
+        </view>
+    </view> -->
+
+    <button class='send-publish' bindtap="send">发布</button>
+</view>

@@ -45,7 +45,29 @@ Page({
             userInfo: app.globalData.userInfo,
         });
     },
+    gotoEdit:function(){
+        wx.navigateTo({
+            url: '/pages/information/mainPage/mainPage',
+          })
+    },
+    gotoFriend:function(){
+        wx.navigateTo({
+            url: '/pages/myFriend/myFriend',
+          })
+    },
+    gotoApplication:function(){
+        wx.navigateTo({
+            url: '/pages/myApplication/myApplication',
+          })
+    },
+    gotoReceive : function () {
+        wx.navigateTo({
+          url: '/pages/applicationReceived/applicationReceived',
+        })
+    }
+
 
 })
+
 
 

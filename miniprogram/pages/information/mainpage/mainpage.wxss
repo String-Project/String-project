@@ -1,0 +1,175 @@
+page {
+  background: #FFFFFF;
+}
+/* 顶部 */
+/* .head {
+  position: absolute;
+  width: 100vw;
+  height: 30.95vh;
+
+  z-index: 1;
+  background: #4F71BE;
+} */
+
+/* 弦计划中文 */
+/* .stringChinese {
+  position: absolute;
+  width: 34.87vw;
+  height: 4.15vh;
+  left: 6.15vw;
+  top: 6.75vh;
+
+  font-family: PingFang SC; 
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.96vh;
+  line-height: 4.15vh;
+
+  color: #FFFFFF;
+} */
+/* 弦计划英文 */
+/* .stringEnglish {
+  position: absolute;
+  width: 55.13vw;
+  height: 3.2vh;
+  left: 6.15vw;
+  top: 10.9vh;
+
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.37vh;
+  line-height: 3.2vh;
+
+  color: #FFFFFF; 
+} */
+
+/* 相关结果 */
+/* .resultView {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 87.69vw;
+  height: 2.49vh;
+  left: 6.15vw;
+  top: 24.76vh;
+}
+
+.searchResultView {
+  position: absolute;
+  width: 100vw;
+  height: 52.73vh;
+  left: 0px;
+  top: 28.79vh;
+  display: flex;
+  flex-direction: column;
+  border-top: 0.12vh solid #F0F0F0;
+}
+.searchResultItem {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.12vh solid #F0F0F0;
+  flex-direction: row;
+}
+.iconCircle {
+  display: flex;
+  width: 12.31vw;
+  height: 5.68vh;
+  margin-top: 1.66vh;
+  margin-left: 6.15vw;
+  margin-right: 6.15vw;
+  border-radius: 50%;
+  background: #F2F2F2;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+} */ 
+
+
+
+.amountBg{
+  height:100px;
+  background-color:#4F71BE;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  }
+.img{
+  margin-left:20px;
+  }
+.account{
+  width:70%;
+  color:#ffffff;
+  margin-left:10px;
+}
+.nav{
+    width: 40%;
+    text-align: right;  
+    margin-right:15px;
+    color:#ffffff;
+}
+.clear{
+  padding-top: 70px;
+  background-color: #4F71BE;
+  }
+  .item{
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  align-items: center;
+  }
+  .icon{
+  width: 50px;
+  text-align: center;
+  }
+  .itemName{
+  width: 40%;
+  font-size: 14px;
+  font-weight: bold;
+  }
+  .line{
+  height: 10px;
+  }
+  .hr{
+  height: 1px;
+  background-color: #cccccc;
+  opacity: 0.2;
+  }
+  .remark{
+  font-weight: normal;
+  margin-top:5px;
+  }
+  .right{
+  width: 40%;
+  text-align: right;
+  }
+  .opr{
+    color: #5495E6;
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 10px;
+    }
+    .amountBg{
+      height:180rpx;
+      background-color:#4F71BE;
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+      }
+    .Title{
+      color: #FFFFFF;
+      display:flex;
+      width: 100%;
+      flex-direction:row;
+      justify-content: center;
+    }
+    .nav{
+        /* width: 40%; */
+        text-align: right;  
+        margin-left:15px;
+        color:#ffffff;
+    }
