@@ -1,0 +1,50 @@
+<!-- 顶部 -->
+<view class="{{searchState == true ?  'headFocus': 'head'}}">
+    <text class="stringChinese">弦计划</text>
+    <text class="stringEnglish">Project String</text>
+    <swiper autoplay="{{true}}" previous-margin="38.46rpx" next-margin="38.46rpx"
+            vertical="{{false}}" interval="3000" duration="1500" class="swiper" circular="{{true}}">
+        <swiper-item wx:for="{{information}}" class="container">
+            <view class="information"></view>
+        </swiper-item>
+    </swiper>
+</view>
+
+<!-- 搜索框 -->
+<!-- 底部的伪搜索框（不做真实输入） -->
+<view class="searchBar">
+    <image src="/images/search/searchIcon.svg" style="padding-left:30.77rpx;padding-right:23.08rpx;width:38.46rpx" mode="widthFix"></image>
+    <view style="width:565.38rpx;height:100%;display:flex;align-items:center">
+        <navigator class="placeholder" url="/pages/search/search_input/search_input" open-type="switchTab">
+            查找同事、校友、同行
+        </navigator>
+    </view>
+</view>
+
+<!-- 未选定状态下的“大家都在搜” -->
+<view>
+    <!-- 大家都在搜及换一批 -->
+    <view class="allSearchView">
+        <view class="allSearch">大家都在搜</view>
+        <view bindtap="" class="changeBatchView">
+            <image src="/images/search/changeBatch.svg" mode="widthFix" class="changeBatchIcon"/>
+            <text class="changeBatchText">换一批</text>
+        </view>
+    </view>
+    <!-- 大家都在搜的结果（暂时使用虚假数据） -->
+    <view class="allSearchResultView">
+        <block wx:for="{{allSearchResult}}">
+            <view class="allSearchResultItem">
+                <image src="{{item.iconPath}}" mode="widthFix" style="width:44.23rpx;height:44.23rpx;padding-left:19.23rpx;padding-right:19.23rpx;"/>
+                <view class="allSearchResultText">
+                    {{item.name}}
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+
+<!-- 隐私政策等 -->
+<view>
+    <text class="policy">隐私政策 ｜ 用户协议 ｜ 最终用户许可</text>
+</view>

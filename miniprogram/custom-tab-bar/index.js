@@ -20,7 +20,7 @@ Component({
     color: "#7A7E83",
     selectedColor: "#3cc51f",
     list: [{
-      pagePath: "/pages/search/search",
+      pagePath: "/pages/search/search_home/search_home",
       iconPath: "/images/tabBar/search.png",
       selectedIconPath: "/images/tabBar/search_s.png",
       text: "搜索"
