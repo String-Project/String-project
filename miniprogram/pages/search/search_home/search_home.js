@@ -78,23 +78,23 @@ Page({
     },
 
     // 当退出搜索结果时触发
-    bindInputEnd: function(e) {
-        if (this.data.inputFocus) {
-            this.setData({
-                inputConfirm: false,
-                inputFocus: false,
-                searchState: true,
-            });
-        }
-        else {
-            this.setData({
-                inputConfirm: false,
-                inputFocus: false,
-                searchState: false,
-            });
-        }
+    // bindInputEnd: function(e) {
+    //     if (this.data.inputFocus) {
+    //         this.setData({
+    //             inputConfirm: false,
+    //             inputFocus: false,
+    //             searchState: true,
+    //         });
+    //     }
+    //     else {
+    //         this.setData({
+    //             inputConfirm: false,
+    //             inputFocus: false,
+    //             searchState: false,
+    //         });
+    //     }
         
-    },
+    // },
 
     // 输入完成触发
     bindInput: function(e) {

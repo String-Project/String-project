@@ -37,44 +37,31 @@
     "disableUseStrict": false,
     "minifyWXML": true,
     "showES6CompileOption": false,
-    "useCompilerPlugins": false
+    "useCompilerPlugins": false,
+    "useStaticServer": true,
+    "ignoreUploadUnusedFiles": true
   },
   "appid": "wx8d60424db5f9bcc3",
   "projectname": "WeDaily",
   "libVersion": "2.22.0",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
-  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
     "miniprogram": {
       "list": [
         {
-          "id": -1,
           "name": "db guide",
           "pathName": "pages/databaseGuide/databaseGuide",
           "query": ""
         },
         {
-          "id": -1,
           "name": "登录界面",
           "pathName": "pages/loign/login",
           "query": "",
           "scene": null
         },
         {
-          "id": 2,
           "name": "测试分享",
           "pathName": "pages/invite/invite",
           "query": "a=1",
@@ -82,14 +69,12 @@
           "referrerInfo": {}
         },
         {
-          "id": 3,
           "name": "测试被分享",
           "pathName": "pages/invite/invite",
           "query": "user_id=oYQbr0JZYJbMPoTfySMsrzVxMbRM&index=1&name=%E5%AE%9D%E5%AE%9D&content=%E6%88%91%E4%BB%AC%E6%AF%8F%E5%A4%A9%E5%8E%BB%E8%B7%91%E6%AD%A5%E5%90%A7",
           "scene": null
         },
         {
-          "id": 4,
           "name": "测试奖励详情页",
           "pathName": "pages/calendar/calendar",
           "query": "habit_id=XJTRg8DR1TiND57O&type=award&time=-1&count=96&award={\"_id\":\"XKLV48DR1TiNR1A3\",\"_openid\":\"oYQbr0JZYJbMPoTfySMsrzVxMbRM\",\"avatar\":\"https://wx.qlogo.cn/mmopen/vi_32/p0kEBURPwdVRTR8BZJGQXdv4vGE1LqPcmGmODJmc0CibQSkticQoU19oTteesg1SBGjGibibpsZ9q2GeiatA4nNrFbg/132\",\"content\":\"芸子啊\",\"create_time\":\"2019-04-02T03:24:18.999Z\",\"current_count\":7,\"deadline\":null,\"finish\":0,\"habit_id\":\"XJTRg8DR1TiND57O\",\"habit_name\":\"戒烟\",\"isTime\":false,\"last_count\":100,\"title\":\"一个熊抱\",\"to_partner\":false,\"lastCount\":96,\"habit\":{\"_id\":\"XJTRg8DR1TiND57O\",\"_openid\":\"oYQbr0JZYJbMPoTfySMsrzVxMbRM\",\"create_time\":\"2019-03-22T12:13:54.818Z\",\"end_time\":null,\"icon\":1,\"share\":false,\"status\":0,\"times\":11,\"title\":\"戒烟\",\"weekday\":127,\"finish_id\":\"\",\"finish\":false}}",
@@ -97,5 +82,16 @@
         }
       ]
     }
-  }
+  },
+  "compileType": "miniprogram",
+  "srcMiniprogramRoot": "miniprogram/",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  },
+  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
 }
