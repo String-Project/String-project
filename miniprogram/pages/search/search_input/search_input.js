@@ -43,9 +43,6 @@ Page({
 
     // 输入完成触发
     bindConfirm: function(e) {
-        wx.switchTab({
-            url: '/pages/search/search_result/search_result'
-        });
         this.setData({
             inputConfirm : true
         });
