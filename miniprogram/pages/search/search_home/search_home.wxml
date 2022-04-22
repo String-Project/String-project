@@ -1,5 +1,5 @@
 <!-- 顶部 -->
-<view class="{{searchState == true ?  'headFocus': 'head'}}">
+<view class="head">
     <text class="stringChinese">弦计划</text>
     <text class="stringEnglish">Project String</text>
     <swiper autoplay="{{true}}" previous-margin="38.46rpx" next-margin="38.46rpx"

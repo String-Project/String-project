@@ -32,27 +32,25 @@ Page({
     },
     
     // onLoad函数
-    onLoad: function (options) {
-        var that = this
-        // 登录态
-        if (app.globalData.userInfo == null || app.globalData.userInfo == "") {
-          wx.redirectTo({
-            url: '/pages/loginV2/login',
-          });
-          return ;
-        }
-        // 用户信息
-        that.setData({
-          userInfo: app.globalData.userInfo,
-        });
-    },
+    // onLoad: function (options) {
+    //     var that = this
+    //     // 登录态
+    //     if (app.globalData.userInfo == null || app.globalData.userInfo == "") {
+    //       wx.redirectTo({
+    //         url: '/pages/loginV2/login',
+    //       });
+    //       return ;
+    //     }
+    //     // 用户信息
+    //     that.setData({
+    //       userInfo: app.globalData.userInfo,
+    //     });
+    // },
 
 
 
     // onShow函数
     onShow: function() {
-
-
         if (typeof this.getTabBar === 'function' && this.getTabBar()) {
             this.getTabBar().setData({
                 selected: 0,
@@ -95,28 +93,4 @@ Page({
     //     }
         
     // },
-
-    // 输入完成触发
-    bindInput: function(e) {
-        var val = e.detail.value;
-        this.setData({
-            inputValue: val
-        });
-    },
-
-    // 输入完成触发
-    bindConfirm: function(e) {
-        if (this.data.inputValue == '') {
-            this.setData({
-                inputConfirm: false,
-                inputFocus: false
-            });
-        }
-        else {
-            this.setData({
-                inputConfirm: true,
-                inputFocus: false
-            });
-        }
-    }
 })

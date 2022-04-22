@@ -2,7 +2,6 @@
    "pages": [
       "pages/search/search_home/search_home",
       "pages/search/search_input/search_input",
-      "pages/search/search_result/search_result",
       "pages/mine/mine",
       "pages/information/mainPage/mainPage",
       "pages/information/basicInformation/basicInformation",
@@ -47,12 +46,6 @@
          },
          {
             "pagePath": "pages/search/search_input/search_input",
-            "iconPath": "images/tabBar/index.png",
-            "selectedIconPath": "images/tabBar/index_s.png",
-            "text": "搜索"
-         },
-         {
-            "pagePath": "pages/search/search_input/search_result",
             "iconPath": "images/tabBar/index.png",
             "selectedIconPath": "images/tabBar/index_s.png",
             "text": "搜索"
