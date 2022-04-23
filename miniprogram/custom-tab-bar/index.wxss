@@ -7,7 +7,7 @@
     bottom: 1px;
     left: 0;
     right: 0;
-    height: 10.67vh;
+    height: 5.42vh;
     background: rgba(249, 249, 249, 0.94);
     /* background: #bdc3c7;  */
     /* background: -webkit-linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4)); */

@@ -16,7 +16,11 @@ Page({
         ], // 大家都在搜
         // Swiper相关的data
         swiperHidden: false,
-        information: [1, 2, 3]
+        information: [
+            {image: "/images/search/swiperGraph.svg"},
+            {image: "/images/search/swiperGraph.svg"},
+            {image: "/images/search/swiperGraph.svg"}
+        ]
     },
     
     // onLoad函数

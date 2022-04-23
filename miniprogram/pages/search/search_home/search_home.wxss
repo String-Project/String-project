@@ -5,54 +5,57 @@ page {
 .head {
     position: absolute;
     width: 100vw;
-    height: 34.95vh;
+    height: 150px;
 
     z-index: 1;
-    background: #4F71BE;
+    background: #4F80FF;
 }
-/* 弦计划中文 */
-.stringChinese {
+/* 顶部椭圆 */
+.headEllipse {
     position: absolute;
-    width: 34.87vw;
-    height: 4.15vh;
-    left: 6.15vw;
-    top: 6.75vh;
-
-    /* font-family: PingFang SC; */
+    left: -76px;
+    width: 527px;
+    height: 203px;
+    top: 44px;
+    border-radius: 50% / 50%;
+    z-index: 1;
+    background: #4F80FF;
+}
+/* 顶部文字框 */
+.stringTextBar {
+    position: absolute;
+    left: 4.27vw;
+    top: 6.40vh;
+}
+/* 顶部文字1 */
+.stringText1 {
+    font-family: 'PingFang SC';
     font-style: normal;
-    font-weight: 500;
-    font-size: 2.96vh;
-    line-height: 4.15vh;
-
-    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    color: #FFFFFF; 
 }
-/* 弦计划英文 */
-.stringEnglish {
-    position: absolute;
-    width: 55.13vw;
-    height: 3.2vh;
-    left: 6.15vw;
-    top: 10.9vh;
-
-    font-family: Noto Sans;
+/* 顶部文字2 */
+.stringText2 {
+    font-family: 'PingFang SC';
     font-style: normal;
     font-weight: 300;
-    font-size: 2.37vh;
-    line-height: 3.2vh;
-
+    font-size: 13px;
+    line-height: 18px;
     color: #FFFFFF; 
 }
 /* Swiper相关的样式 */
 .swiper {
     position: absolute;
-    height: 12.91vh;
-    top: 16.94vh;
+    height: 145px;
+    top: 132px;
     width: 100vw;
 }
 .information {
-    height: 12.91vh;
-    width: 87.69vw;
-    background: #7293DD;
+    height: 100%;
+    width: 100%;
+    /* background: black; */
     border-radius: 2.56vw;
 }
 /* 搜索框 */
@@ -61,13 +64,13 @@ page {
     width: 87.69vw;
     height: 5.57vh;
     left: 6.15vw;
-    top: 32.11vh;
+    top: 293px;
 
     z-index: 2;
     background: #FFFFFF;
-    border: 1px solid #4F71BE;
+    border: 2px solid #4F80FF;
     box-sizing: border-box;
-    border-radius: 2.56vw;
+    border-radius: 6.93vw;
 
     display: flex;
     flex-direction: row;
@@ -101,7 +104,7 @@ page {
     width: 87.69vw;
     height: 2.49vh;
     left: 6.15vw;
-    top: 39.93vh;
+    top: 353px;
 }
 .allSearch {
     width: 21.79vw;
@@ -118,7 +121,7 @@ page {
     width: 86.92vw;
     height: 36.73vh;
     left: 6.15vw;
-    top: 44.43vh;
+    top: 381px;
 
     display: flex;
     flex-wrap: wrap;
@@ -172,23 +175,4 @@ page {
     text-align: right;
 
     color: #979797;
-}
-/* 隐私政策等 */
-.policy {
-    position: absolute;
-    width: 74.36vw;
-    height: 2.13vh;
-    left: 12.82vw;
-    top: 81.75vh;
-
-    /* font-family: Noto Sans; */
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.54vh;
-    line-height: 2.13vh;
-    /* identical to box height */
-
-    text-align: center;
-
-    color: #516798;
 }

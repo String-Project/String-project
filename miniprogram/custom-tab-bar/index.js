@@ -23,12 +23,10 @@ Component({
       pagePath: "/pages/search/search_home/search_home",
       iconPath: "/images/tabBar/search.png",
       selectedIconPath: "/images/tabBar/search_s.png",
-      text: "搜索"
     }, {
       pagePath: "/pages/mine/mine",
       iconPath: "/images/tabBar/mine2.png",
       selectedIconPath: "/images/tabBar/mine2_s.png",
-      text: "我的"
     }],
   },
 

@@ -1,23 +1,13 @@
-<!-- 顶部 -->
-<view class="headFocus">
-    <text class="stringChinese">弦计划</text>
-    <text class="stringEnglish">Project String</text>
-</view>
-
 <!-- 顶部的搜索框（实现真实输入） -->
 <view class="searchBarFocus">
     <image src="/images/search/searchIcon.svg" style="padding-left:30.77rpx;padding-right:23.08rpx;width:38.46rpx" mode="widthFix"></image>
-    <input placeholder="查找同事、校友、同行" placeholder-class="placeholder" class="inputText" focus="{{inputFocus}}" catchconfirm="bindConfirm"
+    <input placeholder="使用“+”进行组合查询 如: 浙江大学+赵信" placeholder-class="placeholder" class="inputText" focus="{{inputFocus}}" catchconfirm="bindConfirm"
            value="{{inputValue}}" catchinput="bindInput"/>
 </view>
 
 <!-- 选定状态下的“搜索历史”和“搜索结果” -->
 <view wx:if="{{!inputConfirm}}">
     <!-- 未输入值时搜索历史 -->
-        <!-- 搜索提示文字 -->
-        <view class="searchTipsView">
-            <text class="searchTips">使用“+”进行组合查询 如: 浙江大学+赵信</text>
-        </view>
         <!-- 搜索历史文字 -->
         <view  class="searchHistoryView">
             <text class="searchHistoryText">搜索历史</text>
