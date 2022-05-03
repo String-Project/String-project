@@ -4,7 +4,7 @@
     <!--view class="img"><image src="/images/mine/emptyAvatar.svg"
         style="width:49px;height:47px;"-->
     <view class="img"><image src="{{userInfo.avatar}}"
-        style="width:49px;height:47px;clip-path: circle(55rpx at center);">    
+        class="circlehead">    
     </image></view>
     <view class="account">
         <!-- <view>{{userInfo.nickName}}</view> -->

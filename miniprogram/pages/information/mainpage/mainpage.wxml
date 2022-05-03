@@ -15,11 +15,11 @@
     <view class="Title">个人资料</view>    
 </view> 
 <view class="amountBg">
-    <view class="img"><image src="/images/mine/emptyAvatar.svg" style="width:49px;height:47px;">
+    <view class="img"><image src="{{userInfo.avatar}}" class="circlehead">
     </image></view>
     <view class="account">
         <!-- <view>{{userInfo.nickName}}</view> -->
-        <view>郑山行</view>
+        <view>{{userInfo.nickname}}</view>
     </view>
     <view class="nav" bindtap="gotoBasic"><text>编辑 </text>></view>
 </view>

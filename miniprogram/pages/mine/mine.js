@@ -47,7 +47,7 @@ Page({
     },
     gotoEdit:function(){
         wx.navigateTo({
-            url: '/pages/information/mainPage/mainPage',
+            url: '/pages/information/mainpage/mainpage',
           })
     },
     gotoFriend:function(){

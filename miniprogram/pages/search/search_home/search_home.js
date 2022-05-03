@@ -24,20 +24,20 @@ Page({
     },
     
     // onLoad函数
-    // onLoad: function (options) {
-    //     var that = this
-    //     // 登录态
-    //     if (app.globalData.userInfo == null || app.globalData.userInfo == "") {
-    //       wx.redirectTo({
-    //         url: '/pages/loginV2/login',
-    //       });
-    //       return ;
-    //     }
-    //     // 用户信息
-    //     that.setData({
-    //       userInfo: app.globalData.userInfo,
-    //     });
-    // },
+    onLoad: function (options) {
+        var that = this
+        // 登录态
+        if (app.globalData.userInfo == null || app.globalData.userInfo == "") {
+          wx.redirectTo({
+            url: '../../loginV2/login',
+          });
+          return ;
+        }
+        // 用户信息
+        that.setData({
+          userInfo: app.globalData.userInfo,
+        });
+    },
 
     // onShow函数
     onShow: function() {

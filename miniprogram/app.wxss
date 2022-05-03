@@ -11,6 +11,11 @@
   background: #ffa751;
 }
 
+.circlehead{   
+ height: 48px;    
+ width: 48px;    
+ border-radius: 25px;}
+
 /* 渐变色 */
 .mango-grad-bg {
   background: -webkit-linear-gradient(to right, #ffa751, #ffe259);
