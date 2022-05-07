@@ -5,7 +5,7 @@
       "pages/mine/mine",
       "pages/information/mainpage/mainpage",
       "pages/information/basicInformation/basicInformation",
-      "pages/information/workingexperience/workingexperience",
+      "pages/information/workingExperience/workingExperience",
       "pages/information/educationExperience/educationExperience",     
       "pages/myFriend/myFriend", 
       "pages/loginV2/login",
@@ -28,10 +28,9 @@
       "pages/info/infoUpdate/infoUpdate"
    ],
    "window": {
-      "backgroundColor": "#F6F6F6",
+      "navigationBarBackgroundColor": "#fff",
       "backgroundTextStyle": "light",
-      "navigationBarTitleText": "Mango Daily",
-      "navigationStyle": "custom"
+      "navigationBarTextStyle": "black"
    },
    "tabBar": {
       "custom": true,

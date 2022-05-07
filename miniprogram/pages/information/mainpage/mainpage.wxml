@@ -11,9 +11,9 @@
         <view class="nav">></view>  
     </block>   
 </view> -->
-<view class="amountBg">
+<!-- <view class="amountBg">
     <view class="Title">个人资料</view>    
-</view> 
+</view>  -->
 <view class="amountBg">
     <view class="img"><image src="{{userInfo.avatar}}" class="circlehead">
     </image></view>
@@ -21,7 +21,7 @@
         <!-- <view>{{userInfo.nickName}}</view> -->
         <view>{{userInfo.nickname}}</view>
     </view>
-    <view class="nav" bindtap="gotoBasic"><text>编辑 </text>></view>
+    <view class="nav" bindtap="gotoBasic"><text>编辑 </text></view>
 </view>
 
 
@@ -42,33 +42,24 @@
 
 <view class="hr"></view>
 <view class="item">
-    <view class="icon">
-        <image src="/images/mine/emptyAvatar.svg" style="width:22px;height:21px;"></image>
-    </view>
     <view class="itemName">
         <view>工作经历</view>
     </view>
     <view class="right" bindtap="gotoWork">
-        <text class="opr"></text>></view>
+        <text>+</text></view>
 </view>
 
 <view class="hr"></view>
 <view class="item">
-    <view class="icon">
-        <image src="/images/mine/emptyAvatar.svg" style="width:22px;height:21px;"></image>
-    </view>
     <view class="itemName">
         <view>教育经历</view>
     </view>
     <view class="right" bindtap="gotoEducation">
-    <text class="opr"></text>></view>
+    <text>+</text></view>
 </view>
 
 <view class="hr"></view>
 <view class="item">
-    <view class="icon">
-        <image src="/images/mine/emptyAvatar.svg" style="width:22px;height:21px;"></image>
-    </view>
     <view class="itemName">
         <view>联系方式</view>
     </view>
