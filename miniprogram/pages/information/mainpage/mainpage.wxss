@@ -122,6 +122,12 @@ page {
   height: 50px;
   align-items: center;
   }
+  .detail{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    }
   .icon{
   width: 50px;
   text-align: center;
@@ -168,3 +174,83 @@ page {
         margin-left:15px;
         color:black;
     }
+    .searchResultView {
+      width: 100vw;
+      height: 52.73vh;
+      left: 0px;
+      /* top: 28.79vh; */
+      display: flex;
+      flex-direction: column;
+      border-top: 0.12vh solid #F0F0F0;
+  }
+  .searchResultItem {
+      width: 100vw;
+      height: auto;
+      display: flex;
+      align-items: center;
+      border-bottom: 0.12vh solid #F0F0F0;
+      flex-direction: row;
+  }
+  .iconCircle {
+      display: flex;
+      width: 12.31vw;
+      height: 7.68vh;
+      margin-top: 1.66vh;
+      margin-left: 10vw;
+      margin-right: 10vw;
+      /* border-radius: 50%; */
+      background: #F2F2F2;
+      align-self: flex-start;
+      align-items: center;
+      justify-content: center;
+  }
+  .informationView {
+      display: flex;
+      flex-direction: column;
+      width: 68.21vw;
+      margin-top: 1.9vh;
+      margin-bottom: 1.9vh;
+  }
+  .information1 {
+      /* font-family: PingFang SC; */
+      font-style: normal;
+      font-weight: 500;
+      font-size: 2.01vh;
+      line-height: 2.84vh;
+      color: rgba(0, 0, 0, 0.9);
+      margin-bottom: 0.12vh;
+  }
+  .information2 {
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.54vh;
+      line-height: 2.13vh;
+      color: rgba(0, 0, 0, 0.9);
+      margin-bottom: 0.83vh;
+  }
+  .information3 {
+      display: flex;
+      height: auto;
+      margin-bottom: 0.36vh;
+      align-items: center;
+  }
+  .information3Text {
+      padding-top: 0.12vh;
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.18vh;
+      line-height: 1.66vh;
+      color: #979797;
+  }
+  .tele{
+     margin-left: 40rpx;
+     width: 300rpx;
+     background-color: #f3f3f3;
+     text-align: center;
+     border: 1px solid #5581fa;
+  }
+  .number{
+    color: #5581fa;
+  }
