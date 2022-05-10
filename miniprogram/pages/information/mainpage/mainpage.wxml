@@ -39,8 +39,8 @@
 
 
 
-
-<view class="hr"></view>
+<!-- 
+<view class="hr"></view> -->
 <view class="item">
     <view class="itemName">
         <view>工作经历</view>
@@ -49,7 +49,30 @@
         <text>+</text></view>
 </view>
 
-<view class="hr"></view>
+<view class="searchResultView">
+            <block wx:for="{{searchResult}}">
+                <view class="searchResultItem">
+                    <view class="iconCircle">
+                        <image src="/images/search/emptyAvatar.svg" mode="widthFix" style="width:42.31rpx"/>
+                    </view>
+                    <view class="informationView">
+                        <view class="information1">{{item.name}}</view>
+                        <view class="information2" wx:if="{{item.job != ''}}">{{item.job}}</view>
+                        <view class="information3" wx:if="{{item.location != ''}}">
+                            <image src="/images/search/location.svg" mode="widthFix" style="width:19.23rpx;padding-right:7.69rpx"/>
+                            <view class="information3Text">{{item.location}}</view>
+                        </view>
+                        <view class="information3" wx:if="{{item.company != ''}}">
+                            <image src="{{item.companyIcon}}" mode="heightFix" style="height:15.81rpx;padding-right:7.69rpx"/>
+                            <view class="information3Text">{{item.company}}</view>
+                        </view>
+                    </view>
+                    <image src="/images/search/stroke.svg" mode="widthFix" style="width:15.38rpx"/>
+                </view>
+            </block>
+        </view>
+
+<!-- <view class="hr"></view> -->
 <view class="item">
     <view class="itemName">
         <view>教育经历</view>
@@ -58,12 +81,35 @@
     <text>+</text></view>
 </view>
 
-<view class="hr"></view>
+
+<view class="searchResultView">
+            <block wx:for="{{searchResult}}">
+                <view class="searchResultItem">
+                    <view class="iconCircle">
+                        <image src="/images/search/emptyAvatar.svg" mode="widthFix" style="width:42.31rpx"/>
+                    </view>
+                    <view class="informationView">
+                        <view class="information1">{{item.name}}</view>
+                        <view class="information2" wx:if="{{item.job != ''}}">{{item.job}}</view>
+                        <view class="information3" wx:if="{{item.location != ''}}">
+                            <image src="/images/search/location.svg" mode="widthFix" style="width:19.23rpx;padding-right:7.69rpx"/>
+                            <view class="information3Text">{{item.location}}</view>
+                        </view>
+                        <view class="information3" wx:if="{{item.company != ''}}">
+                            <image src="{{item.companyIcon}}" mode="heightFix" style="height:15.81rpx;padding-right:7.69rpx"/>
+                            <view class="information3Text">{{item.company}}</view>
+                        </view>
+                    </view>
+                    <image src="/images/search/stroke.svg" mode="widthFix" style="width:15.38rpx"/>
+                </view>
+            </block>
+        </view>
+
+<!-- <view class="hr"></view> -->
 <view class="item">
     <view class="itemName">
         <view>联系方式</view>
     </view>
-
-
 </view>
 
+<view class="tele"><text class="number">123-456-7789</text></view>
