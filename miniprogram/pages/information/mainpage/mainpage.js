@@ -1,6 +1,6 @@
 
 var App=getApp()
-
+const db = wx.cloud.database(); 
 Page({
     // 页面数据
     data : {
@@ -61,10 +61,19 @@ Page({
           })
     },
     gotoWork:function(){
+        var toupdate = false;
+        console.log(toupdate)
       wx.navigateTo({
-          url: '/pages/information/workingExperience/workingExperience',
+          url: '/pages/information/workingExperience/workingExperience?toupdate=' + toupdate,
         })
   },
+    _gotoWork:function(){
+        var toupdate = true;
+        console.log(toupdate)
+        wx.navigateTo({
+            url: '/pages/information/workingExperience/workingExperience?toupdate=' + toupdate,
+        })
+    },
     gotoEducation:function(){
         wx.navigateTo({
             url: '/pages/information/educationExperience/educationExperience',

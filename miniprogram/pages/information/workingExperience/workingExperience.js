@@ -12,7 +12,7 @@
 
 //import db from "../util/db.js";
 const db = wx.cloud.database(); //暂时使用微信自带云开发数据库
-const collection = "Info"; //工作经历上传到云开发数据库Info集合中
+//工作经历上传到云开发数据库Info集合中
 
 // pages/publish/publish.js，发布快递信息
 // INFORM workingExperience, 工作经历添加
@@ -21,14 +21,41 @@ const app = getApp()
 Page({
 
   data:{
-    duration: null,
-    location: null, 
-    company: null,
-    title: null,
-    description: null,
+    toupdate: null,
+    ExperienceType: "WorkingExperience",
+    duration: "请输入工作时期",
+    location: "请输入工作地点", 
+    company: "请输入所在公司",
+    title: "请输入职位title",
+    description: "请输入详细描述",
   },
 
-  // 顺序为商品价格，商品标签，商品数量，商品标题，作用是获取input里的值，应该可以用循环来获取，但我现在还不会写
+  onLoad: function(options){
+    var that = this
+    that.setData({
+      toupdate: options.toupdate
+    })
+    console.log(that.data.toupdate)
+
+    if (that.data.toupdate == "true"){
+      db.collection('Info').doc('6d85a2b9629a19a70887f9ab3af08d6f').get({
+        success:res=>{
+          // res.data 包含该记录的数据
+          console.log(res.data);
+          that.setData({
+            duration: res.data.duration,
+            location: res.data.location, 
+            company: res.data.company, 
+            title: res.data.title, 
+            description: res.data.description,
+          })
+        }
+      })
+      
+      // document.getElementById("input").setAttribute("placeholder","新文本内容");
+    }
+  },
+
   duration1: function (e) {
     this.setData({
       duration: e.detail.value
@@ -56,21 +83,42 @@ Page({
   },
   //上传按钮
   upData: function (e) {
-    db.collection('Info').add({
-      data:{
-        duration: this.data.duration,
-        location: this.data.location,
-        company: this.data.company,
-        title: this.data.title,
-        description: this.data.description,
-      },
-      success:res=>{
-        console.log(res);
-      },
-      fail:err=>{
-        console.log(err);
-      }
-    })
+    if (this.data.toupdate == "false"){
+        db.collection('Info').add({
+        data:{
+          ExperienceType: this.data.ExperienceType,
+          duration: this.data.duration,
+          location: this.data.location,
+          company: this.data.company,
+          title: this.data.title,
+          description: this.data.description,
+        },
+        success:res=>{
+          console.log(res);
+        },
+        fail:err=>{
+          console.log(err);
+        }
+      })
+    }
+    else{
+      db.collection('Info').doc('6d85a2b9629a19a70887f9ab3af08d6f').update({
+        data:{
+          ExperienceType: this.data.ExperienceType,
+          duration: this.data.duration,
+          location: this.data.location,
+          company: this.data.company,
+          title: this.data.title,
+          description: this.data.description,
+        },
+        success:res=>{
+          console.log(res);
+        },
+        fail:err=>{
+          console.log(err);
+        }
+      })
+    }
   },
 
   /**
