@@ -7,6 +7,7 @@
       "pages/information/mainpage/mainpage",
       "pages/information/basicInformation/basicInformation",
       "pages/information/workingExperience/workingExperience",
+      "pages/information/myTag/myTag",
       "pages/information/educationExperience/educationExperience",     
       "pages/myFriend/myFriend", 
       "pages/loginV2/login",

@@ -117,3 +117,13 @@
 </view>
 
 <view class="tele"><text class="number">123-456-7789</text></view>
+
+
+<view class="item">
+    <view class="itemName">
+      <navigator url="/pages/information/myTag/myTag" class="a">
+        <!-- <text class="icon preference"></text> -->
+      <view>我的标签</view>
+      </navigator>
+    </view>
+</view>
