@@ -27,31 +27,25 @@ Page({
     institution: null,
     major: null,
     description: null,
+    degreeIndex: -1,
+    degreeArray: ["学士", "硕士", "博士", "MBA"],
+    startDate: -1,
+    endDate: -1
   },
 
-  duration1: function (e) {
+  bindPickerChange: function(e) {
     this.setData({
-      duration: e.detail.value
+      degreeIndex: e.detail.value
     })
   },
-  EducationType1: function (e) {
+  bindDateChange1: function(e) {
     this.setData({
-      EducationType: e.detail.value
+      startDate: e.detail.value
     })
   },
-  institution1: function (e) {
+  bindDateChange2: function(e) {
     this.setData({
-      institution: e.detail.value
-    })
-  },
-  major1: function (e) {
-    this.setData({
-      major: e.detail.value
-    })
-  },
-  description1: function (e) {
-    this.setData({
-      description: e.detail.value
+      endDate: e.detail.value
     })
   },
   //上传按钮

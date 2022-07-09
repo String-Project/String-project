@@ -1,0 +1,73 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+}
+
+.loginText {
+    margin-top: 24px;
+
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.welcomeEnglishText {
+    margin-top: 63px;
+
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    color: #333333;
+}
+
+.welcomeChineseText {
+    margin-top: 9px;
+
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+    color: #666666;
+}
+
+.startButton {
+    position: absolute;
+    left: 16px;
+    top: 628px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 137px;
+    gap: 10px;
+
+    height: fit-content;
+    width: 343px;
+
+    background: #4F80FF;
+    border-radius: 10px;
+}
+
+.startText {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 24px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}

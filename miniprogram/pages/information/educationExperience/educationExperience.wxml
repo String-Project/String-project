@@ -1,49 +1,24 @@
-<!-- pages/information/workingexperience/workingexperience.wxml
-<text>workingExperience</text>
-<view class='page'>
-    <view class="add-form">
+<view class="infoContainer">
+    <input placeholder="学校" class="inputText" placeholder-class="placeholderText"></input>
+    <input placeholder="专业" class="inputText" placeholder-class="placeholderText"></input>
+    <picker class="inputText" mode="selector" bindchange="bindPickerChange" value="{{degreeIndex}}" range="{{degreeArray}}">
+        <view wx:if="{{degreeIndex != -1}}">{{degreeArray[degreeIndex]}}</view>
+        <view wx:else class="placeholderText">学位</view>
+    </picker>
+    <view class="schoolTime">
+        <picker class="schoolTimeText" mode="date" bindchange="bindDateChange1" fields="month" start="1978-01" end="2022-09">
+            <view wx:if="{{startDate != -1}}">{{startDate}}</view>
+            <view wx:else class="placeholderText">入学时间</view>
+        </picker>
+        <picker class="schoolTimeText" mode="date" bindchange="bindDateChange2" fields="month" start="1978-01" end="2022-09">
+            <view wx:if="{{endDate != -1}}">{{endDate}}</view>
+            <view wx:else class="placeholderText">毕业时间</view>
+        </picker>
+    </view>
 
-       <textarea class="message-input" value="{{address.note}}" placeholder="短信粘贴" placeholder-class="message-content" maxlength="{{maxlength}}" focus="{{focus}}" auto-height="{{auto-height}}" show-confirm-bar="{{show-confirm-bar}}"></textarea>
+    <input placeholder="在校成就" class="inputText" placeholder-class="placeholderText"></input>
+</view>
 
-        <!-- <view class="form-default">
-            <text bindtap="bindIsDefault" class="default-input {{address.is_default == 1 ? 'selected' : ''}}">设为默认地址</text>
-        </view> -->
-
-    <!-- <view class="kongyihang">
-        <text>\n</text>
-    </view>    
-
-    </view> -->
-<!-- /// -->
-
-    <!-- <view class="image_content">
-        <view class='image' wx:for="{{img_url}}">
-            <image class="moment_img" src="{{item}}"></image>
-        </view>
-        <view class='image' style='display:{{hideAdd?"none":"block"}}'>
-            <image bindtap="chooseimage" class="moment_img" src='../../images/add.png'></image>
-        </view>
-    </view> -->
-
-    <!-- <button class='send-publish' bindtap="send">添加</button>
-</view> --> -->
-
-
-<!-- * @param nickname      昵称
- * @param avatar        头像
- * @param sex           性别 (男1女2)
- * @param register_time 注册时间
- * @param job           工作
- * @param major         专业
- * @param company       会社
- * @param university    大学 -->
-
- <view>教育经历上传</view>
-  <view>
-  教育时段：<input id="up_input" name="duration" placeholder="请输入教育时段" bindinput ="duration1"/>
-  教育性质: <input id="up_input" name="EducationType" placeholder="请输入教育性质" bindinput ="EducationType1"/>
-  所在院校: <input id="up_input" name="institution" placeholder="请输入所在院校" bindinput ="institution1"/>
-  所在专业: <input id="up_input" name="major" placeholder="请输入所学专业" bindinput ="major1"/> 
-  详细描述: <input id="up_input" name="description" placeholder="请输入详细描述" bindinput ="description1"/>
-  <button class="upload" bindtap="upData">上传</button>
-   </view>
+<button class="nextButton" bindtap="startFunction">
+    <view class="nextText">下一步</view>
+</button>

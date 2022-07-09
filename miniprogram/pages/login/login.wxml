@@ -1,0 +1,10 @@
+<view class="login">
+    <image src="/images/login/login3.svg" style="width:260px;margin-top:60px" mode="widthFix" />
+    <view class="loginText">那就一群人吧</view>
+    <view class="welcomeEnglishText">Welcome to Project String</view>
+    <view class="welcomeChineseText">欢迎来到弦计划 体验相互成长的力量</view>
+</view>
+
+<button class="startButton" bindtap="startFunction">
+    <view class="startText">开始旅程</view>
+</button>

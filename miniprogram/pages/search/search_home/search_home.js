@@ -29,7 +29,7 @@ Page({
         // 登录态
         if (app.globalData.userInfo == null || app.globalData.userInfo == "") {
           wx.redirectTo({
-            url: '../../loginV2/login',
+            url: '../../login/login',
           });
           return ;
         }
