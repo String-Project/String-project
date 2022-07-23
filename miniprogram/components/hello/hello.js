@@ -40,7 +40,7 @@ Component({
         } else {
           wx.switchTab({
             //url: '/pages/indexV2/index',
-            url:'/pages/search/search_home', 
+            url:'/pages/search/search_home/search_home', 
           });
         }
       } else {

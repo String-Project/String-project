@@ -12,16 +12,18 @@ Page({
         inputFocus: false, // 聚焦
         inputValue: '', // 输入值
         
-        searchNum: "4", // 搜索结果个数
+        searchWorkNum: "4", // 搜索结果个数
+        searchEduNum: null,
         // Swiper相关的data
         swiperHidden: false,
         information: [1, 2, 3],
-        searchResult: [
+        searchResultWork: [
             {name:"李华", job:"武侯分社-签证专员", location:"四川省 成都", company:"成都中港国际旅行社", companyIcon:"/images/search/defaultCompany.svg"},
             {name:"李华", job:"--", location:"", company:"", companyIcon:""},
             {name:"李华", job:"PCG - 视觉设计师", location:"", company:"腾讯", companyIcon:"/images/search/Tencent.png"},
             {name:"李华", job:"运营部 - 产品运营", location:"中国", company:"", companyIcon:""},
         ],
+        searchResultEdu: [],
 
     },
     // onLoad:function(options){
@@ -42,18 +44,33 @@ Page({
             userInfo: App.globalData.userInfo,
         });
 
-        //获取searchResult
+        //获取searchResultWork
         db.collection('Info').where({
-            _openid : App.globalData.userInfo._openid //是同一用户的信息才会被查询，这里为啥直接用userInfo会出问题？
+            _openid : App.globalData.userInfo._openid, //是同一用户的信息才会被查询，这里为啥直接用userInfo会出问题？
+            ExperienceType : "WorkingExperience"
           }).get({
             success: res => {   
               that.setData({
-                searchResult: res.data,
-                searchNum: res.data.length
+                searchResultWork: res.data,
+                searchWorkNum: res.data.length
               });
               console.log(res.data)
             }
           })
+
+          //获取searchResultEdu
+        db.collection('Info').where({
+          _openid : App.globalData.userInfo._openid, //是同一用户的信息才会被查询，这里为啥直接用userInfo会出问题？
+          ExperienceType : "EducationalExperience"
+        }).get({
+          success: res => {   
+            that.setData({
+              searchResultEdu: res.data,
+              searchEduNum: res.data.length
+            });
+            console.log(res.data)
+          }
+        })
 
       
         //获取searchResult完毕

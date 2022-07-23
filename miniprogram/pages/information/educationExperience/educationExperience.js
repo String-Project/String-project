@@ -68,6 +68,13 @@ Page({
     })
   },
 
+  //这一段临时加入以便于后续开发的进行
+  startFunction:function(){
+    wx.redirectTo({
+        url: '/pages/loginV2/login',
+      })
+  },
+
   /**
    * 页面的初始数据
    */
