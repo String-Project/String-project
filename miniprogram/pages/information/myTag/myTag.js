@@ -33,7 +33,7 @@ Page({
   },
   goHome: function () {
     wx.showToast({
-      title: 'success',
+      title: '保存成功',
       duration: 1800,
       mask: true,
       success: function () {
@@ -41,7 +41,7 @@ Page({
         setTimeout(function () {
           //要延时执行的代码
           wx.switchTab({
-            url: '/pages/postlist/postlist',
+            url: '/pages/information/mainpage/mainpage',
           })
         }, 1000) //延迟时间
       }
