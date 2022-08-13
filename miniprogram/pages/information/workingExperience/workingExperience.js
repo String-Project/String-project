@@ -29,6 +29,8 @@ Page({
     company: "请输入所在公司",
     title: "请输入职位title",
     description: "请输入详细描述",
+    startDate: -1,
+    endDate: -1,
   },
 
   onLoad: function(options){

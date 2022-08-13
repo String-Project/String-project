@@ -1,10 +1,10 @@
 <!--pages/information/basicInformation/basicInformation.wxml-->
-<text>pages/information/basicInformation/basicInformation.wxml</text>
+<!-- <text>pages/information/basicInformation/basicInformation.wxml</text>
 <view class='page'>
     <textarea class='text' bindinput="input" placeholder="快递简要描述，不少于{{minContentLength}}字" maxlength='{{maxContentLength}}' show-confirm-bar='false' auto-height/> 
 
 <!-- /// -->
-    <view class="add-form">
+    <!-- <view class="add-form">
         <view class="form-item">
             <input class="input" bindinput="bindinputName" placeholder="快递收货人名" value="{{address.author_parcel_name}}" auto-focus/>
         </view>
@@ -12,7 +12,7 @@
         <view class="form-item">
           <input class="input" bindinput="bindinputBlockNum" placeholder="投递区域" value="{{address.blockNum}}" auto-focus/>
             <!--先改简了 <input class="input" value="{{address.full_region}}" disabled="true" bindtap="chooseRegion" placeholder="楼号"/> -->
-        </view>
+        <!-- </view>
         <view class="form-item">
             <input class="input" bindinput="bindinputPickup_code" placeholder="取货码" value="{{address.Pickup_code}}"/>
         </view>
@@ -21,23 +21,23 @@
         </view>
         <view class="form-item">
             <input class="input" bindinput="bindinputMobile" value="{{address.mobile}}" placeholder="手机号码"/>
-        </view>
+        </view> -->
        
        <!-- <view class="form-item">
             <input class="input" bindinput="bindinputNote" value="{{address.note}}" placeholder="短信粘贴" />
         </view> -->
 
-       <textarea class="message-input" value="{{address.note}}" placeholder="短信粘贴" placeholder-class="message-content" maxlength="{{maxlength}}" focus="{{focus}}" auto-height="{{auto-height}}" show-confirm-bar="{{show-confirm-bar}}"></textarea>
+       <!-- <textarea class="message-input" value="{{address.note}}" placeholder="短信粘贴" placeholder-class="message-content" maxlength="{{maxlength}}" focus="{{focus}}" auto-height="{{auto-height}}" show-confirm-bar="{{show-confirm-bar}}"></textarea>
 
         <!-- <view class="form-default">
             <text bindtap="bindIsDefault" class="default-input {{address.is_default == 1 ? 'selected' : ''}}">设为默认地址</text>
         </view> -->
 
-    <view class="kongyihang">
+    <!-- <view class="kongyihang">
         <text>\n</text>
     </view>    
 
-    </view>
+    </view> -->
 <!-- /// -->
 
     <!-- <view class="image_content">
@@ -48,6 +48,17 @@
             <image bindtap="chooseimage" class="moment_img" src='../../images/add.png'></image>
         </view>
     </view> -->
-
+<!-- 
     <button class='send-publish' bindtap="send">发布</button>
+</view> --> 
+
+<view class="infoContainer">
+    <input placeholder="昵称" class="inputText" placeholder-class="placeholderText"></input>
+    <input placeholder="个人简介" class="inputText" placeholder-class="placeholderText"></input>
+    <input placeholder="所属行业" class="inputText" placeholder-class="placeholderText"></input>
+    <input placeholder="国家/地区" class="inputText" placeholder-class="placeholderText"></input>
 </view>
+
+<button class="nextButton" bindtap="startFunction">
+    <view class="nextText">保存</view>
+</button>
