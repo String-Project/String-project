@@ -1,5 +1,8 @@
 <view class="infoContainer">
-    <input placeholder="学校" class="inputText" placeholder-class="placeholderText"></input>
+    <picker class="inputText" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view wx:if="{{multiIndex[0] != -1 && multiIndex[1] != -1}}">{{multiArray[1][multiIndex[1]]}}</view>
+        <view wx:else class="placeholderText">学校</view>
+    </picker>
     <input placeholder="专业" class="inputText" placeholder-class="placeholderText"></input>
     <picker class="inputText" mode="selector" bindchange="bindPickerChange" value="{{degreeIndex}}" range="{{degreeArray}}">
         <view wx:if="{{degreeIndex != -1}}">{{degreeArray[degreeIndex]}}</view>
