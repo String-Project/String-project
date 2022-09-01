@@ -26,7 +26,7 @@
     </view> -->
 
     <!-- <button class='send-publish' bindtap="send">添加</button>
-</view> --> -->
+</view> --> 
 
 
 <!-- * @param nickname      昵称
@@ -37,8 +37,8 @@
  * @param major         专业
  * @param company       会社
  * @param university    大学 -->
-
-<view>工作经历上传</view>
+<!-- 2.0 -->
+<!-- <view>工作经历上传</view>
   <view>
   工作时期：<input id="up_input" name="duration" placeholder="{{duration}}" bindinput ="duration1"/>
   工作地点: <input id="up_input" name="location" placeholder="{{location}}" bindinput ="location1"/>
@@ -46,4 +46,25 @@
   职位title: <input id="up_input" name="title" placeholder="{{title}}" bindinput ="title1"/> 
   详细描述: <input id="up_input" name="description" placeholder="{{description}}" bindinput ="description1"/>
   <button class="upload" bindtap="upData">上传</button>
-   </view>
+   </view> -->
+
+   <view class="infoContainer">
+    <view class="schoolTime">
+        <picker class="schoolTimeText" mode="date" bindchange="bindDateChange1" fields="month" start="1978-01" end="2022-09">
+            <view wx:if="{{startDate != -1}}">{{startDate}}</view>
+            <view wx:else class="placeholderText">起始时间</view>
+        </picker>
+        <picker class="schoolTimeText" mode="date" bindchange="bindDateChange2" fields="month" start="1978-01" end="2022-09">
+            <view wx:if="{{endDate != -1}}">{{endDate}}</view>
+            <view wx:else class="placeholderText">结束时间</view>
+        </picker>
+    </view>
+    <input placeholder="所在公司" class="inputText" placeholder-class="placeholderText"></input>
+    <input placeholder="工作地点" class="inputText" placeholder-class="placeholderText"></input>
+    <input placeholder="职位" class="inputText" placeholder-class="placeholderText"></input>
+    <input placeholder="详细描述" class="inputText" placeholder-class="placeholderText"></input>
+</view>
+
+<button class="nextButton" bindtap="startFunction">
+    <view class="nextText">上传</view>
+</button>
