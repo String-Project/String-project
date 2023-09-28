@@ -1,66 +1,64 @@
 {
-   "pages": [
-      "pages/information/educationExperience/educationExperience",
-      "pages/search/search_home/search_home",
-      "pages/information/mainpage/mainpage",
-      "pages/login/login",
-      "pages/search/search_input/search_input",
-      "pages/mine/mine",
-      "pages/information/basicInformation/basicInformation",
-      "pages/information/workingExperience/workingExperience",
-      "pages/information/myTag/myTag",
-      "pages/myFriend/myFriend", 
-      "pages/loginV2/login",
-      "pages/myApplication/myApplication",
-      "pages/applicationReceived/applicationReceived",
-      "pages/publish/publish",
-      "pages/square/square/square",
-      "pages/mineV2/mine",
-      "pages/indexV2/index",
-      "pages/setting/setting",
-      "pages/award/award/award",
-      "pages/invite/invite",
-      "pages/award/add/add",
-      "pages/square/detail/detail",
-      "pages/square/add/add",
-      "pages/addV2/add",
-      "pages/calendar/calendar",
-      "pages/about/about",
-      "pages/info/index",
-      "pages/info/infoUpdate/infoUpdate"
-   ],
-   "window": {
-      "navigationBarBackgroundColor": "#fff",
-      "backgroundTextStyle": "light",
-      "navigationBarTextStyle": "black"
-   },
-   "tabBar": {
-      "custom": true,
-      "color": "#000000",
-      "selectedColor": "#000000",
-      "backgroundColor": "#000000",
-      "list": [
-         {
-            "pagePath": "pages/search/search_home/search_home",
-            "iconPath": "images/tabBar/index.png",
-            "selectedIconPath": "images/tabBar/index_s.png"
-         },
-         {
-            "pagePath": "pages/mine/mine",
-            "iconPath": "/images/tabBar/square.png",
-            "selectedIconPath": "/images/tabBar/square_s.png"
-         }
-      ]
-   },
-   "usingComponents": {
-      "nav": "/components/nav/nav",
-      "header": "/components/nav/header/header",
-      "footer": "/components/common/footer/footer",
-      "toast": "/components/toast/toast",
-      "add": "/components/add/add"
-   },
-   "requiredBackgroundModes": [
-      "audio"
-   ],
-   "sitemapLocation": "sitemap.json"
+  "pages": [
+    "pages/information/educationExperience/educationExperience",
+    "pages/search/search_home/search_home",
+    "pages/information/mainpage/mainpage",
+    "pages/login/login",
+    "pages/search/search_input/search_input",
+    "pages/mine/mine",
+    "pages/information/basicInformation/basicInformation",
+    "pages/information/workingExperience/workingExperience",
+    "pages/information/myTag/myTag",
+    "pages/myFriend/myFriend",
+    "pages/loginV2/login",
+    "pages/myApplication/myApplication",
+    "pages/applicationReceived/applicationReceived",
+    "pages/publish/publish",
+    "pages/square/square/square",
+    "pages/mineV2/mine",
+    "pages/indexV2/index",
+    "pages/setting/setting",
+    "pages/award/award/award",
+    "pages/invite/invite",
+    "pages/award/add/add",
+    "pages/square/detail/detail",
+    "pages/square/add/add",
+    "pages/addV2/add",
+    "pages/calendar/calendar",
+    "pages/about/about",
+    "pages/info/index",
+    "pages/info/infoUpdate/infoUpdate"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/search/search_home/search_home",
+        "iconPath": "images/tabBar/index.png",
+        "selectedIconPath": "images/tabBar/index_s.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "/images/tabBar/square.png",
+        "selectedIconPath": "/images/tabBar/square_s.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "nav": "/components/nav/nav",
+    "header": "/components/nav/header/header",
+    "footer": "/components/common/footer/footer",
+    "toast": "/components/toast/toast",
+    "add": "/components/add/add"
+  },
+  "requiredBackgroundModes": ["audio"],
+  "sitemapLocation": "sitemap.json"
 }

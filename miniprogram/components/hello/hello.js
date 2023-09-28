@@ -5,8 +5,7 @@ Component({
   /**
    * 组件的属性列表
    */
-  properties: {
-  },
+  properties: {},
 
   /**
    * 组件的初始数据
@@ -15,39 +14,39 @@ Component({
     show: false,
     name: "",
     step: 0,
-    text: app.text.hello
+    text: app.text.hello,
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-    show: function(name) {
+    show: function (name) {
       this.setData({
         show: true,
-        name: name
+        name: name,
       });
     },
 
-    next: function() {
+    next: function () {
       if (this.data.step == 4) {
-        let path =  wx.getStorageSync('invite');
+        let path = wx.getStorageSync("invite");
 
         if (path) {
           wx.redirectTo({
-            url: path
+            url: path,
           });
         } else {
           wx.switchTab({
             //url: '/pages/indexV2/index',
-            url:'/pages/search/search_home/search_home', 
+            url: "/pages/search/search_home/search_home",
           });
         }
       } else {
         this.setData({
-          step: this.data.step + 1
+          step: this.data.step + 1,
         });
       }
-    }
-  }
-})
+    },
+  },
+});

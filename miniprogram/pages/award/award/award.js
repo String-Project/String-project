@@ -5,7 +5,6 @@ import Habit from "../../../manager/Habit";
 const app = getApp();
 
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -16,116 +15,129 @@ Page({
     userInfo: app.globalData.userInfo,
     partnerInfo: app.globalData.partnerInfo,
 
-    ongoing: true,     // 当前视角 true是正在进行，false是已处理
+    ongoing: true, // 当前视角 true是正在进行，false是已处理
     page: 0,
-    lists: [],         // 奖励列表
+    lists: [], // 奖励列表
   },
 
-  onShow: function() {
+  onShow: function () {
     this.setData({
       userInfo: app.globalData.userInfo,
-      partnerInfo: app.globalData.partnerInfo
+      partnerInfo: app.globalData.partnerInfo,
     });
 
     this.loadData();
 
-    if (typeof this.getTabBar === 'function' &&
-      this.getTabBar()) {
+    if (typeof this.getTabBar === "function" && this.getTabBar()) {
       this.getTabBar().setData({
         selected: 2,
-        page: this
+        page: this,
       });
     }
   },
 
-  onLoad: function(options) {
+  onLoad: function (options) {
     this.toast = this.selectComponent("#toast");
   },
 
   /**
    * 加载奖励
    */
-  loadData: function() {
+  loadData: function () {
     this.toast.showLoading();
-    Award.lists(this.data.userInfo._openid, this.data.page, (this.data.partnerInfo ? this.data.partnerInfo._openid : null), !this.data.ongoing).then(res => {
-      wx.stopPullDownRefresh();
-      let lists = (this.data.page == 0 ? [] : this.data.lists);
+    Award.lists(
+      this.data.userInfo._openid,
+      this.data.page,
+      this.data.partnerInfo ? this.data.partnerInfo._openid : null,
+      !this.data.ongoing,
+    )
+      .then((res) => {
+        wx.stopPullDownRefresh();
+        let lists = this.data.page == 0 ? [] : this.data.lists;
 
-      let finish = 0;
-      res.forEach((item, index) => {
-        let habit = app.globalData.habits[item.habit_id];
-        
-        if (habit) {
-          if (item.isTime) {
-            let time = new Date(new Date().setHours(0, 0, 0, 0)).getTime();
-            let day = 24 * 3600 * 1000;
-            item.lastTime = parseInt( (habit.end_time.getTime() + day - time) / day );
-          } else {
-            item.lastCount = item.last_count - (habit.times - item.current_count);
-          }
+        let finish = 0;
+        res.forEach((item, index) => {
+          let habit = app.globalData.habits[item.habit_id];
 
-          item.habit = habit;
-
-          lists.push(item);
-          finish++;
-        } else {
-          Habit.detail(item.habit_id).then(habit => {
-
-            if (habit != null) {
-              if (item.isTime) {
-                let time = new Date(new Date().setHours(0, 0, 0, 0)).getTime();
-                let day = 24 * 3600 * 1000;
-                item.lastTime = parseInt( (habit.end_time.getTime() + day - time) / day );
-              } else {
-                item.lastCount = item.last_count - (habit.times - item.current_count);
-              }
-  
-              item.habit = habit;
-  
-              lists.push(item);
+          if (habit) {
+            if (item.isTime) {
+              let time = new Date(new Date().setHours(0, 0, 0, 0)).getTime();
+              let day = 24 * 3600 * 1000;
+              item.lastTime = parseInt(
+                (habit.end_time.getTime() + day - time) / day,
+              );
+            } else {
+              item.lastCount =
+                item.last_count - (habit.times - item.current_count);
             }
-            
+
+            item.habit = habit;
+
+            lists.push(item);
             finish++;
-            
-            if (finish == res.length) {
-              this.toast.hideLoading();
-              this.setData({
-                lists: lists,
-              });
-            }
+          } else {
+            Habit.detail(item.habit_id)
+              .then((habit) => {
+                if (habit != null) {
+                  if (item.isTime) {
+                    let time = new Date(
+                      new Date().setHours(0, 0, 0, 0),
+                    ).getTime();
+                    let day = 24 * 3600 * 1000;
+                    item.lastTime = parseInt(
+                      (habit.end_time.getTime() + day - time) / day,
+                    );
+                  } else {
+                    item.lastCount =
+                      item.last_count - (habit.times - item.current_count);
+                  }
 
-          }).catch(err => {
-            this.toast.showFailure(err);
+                  item.habit = habit;
+
+                  lists.push(item);
+                }
+
+                finish++;
+
+                if (finish == res.length) {
+                  this.toast.hideLoading();
+                  this.setData({
+                    lists: lists,
+                  });
+                }
+              })
+              .catch((err) => {
+                this.toast.showFailure(err);
+              });
+          }
+        });
+
+        if (finish == res.length) {
+          this.toast.hideLoading();
+          this.setData({
+            lists: lists,
           });
         }
-      });
 
-      if (finish == res.length) {
-        this.toast.hideLoading();
         this.setData({
-          lists: lists,
+          page: this.data.page + 1,
         });
-      }
-
-      this.setData({
-        page: this.data.page + 1
+      })
+      .catch((err) => {
+        console.log(err);
+        this.toast.showFailure(err);
       });
-
-    }).catch(err => {    
-      console.log(err);  
-      this.toast.showFailure(err);
-    });
   },
 
   /**
    * 切换视角
    */
-  changeVisual: function(e) {
+  changeVisual: function (e) {
     let visual = e.currentTarget.dataset.type;
-    let ongoing = (visual == "ongoing");
+    let ongoing = visual == "ongoing";
 
     if (this.data.ongoing == ongoing) {
-      return ;
+      return;
     }
 
     this.setData({
@@ -133,42 +145,50 @@ Page({
       page: 0,
     });
 
-    this.loadData()
+    this.loadData();
   },
 
   /**
    * 查看奖励
    */
-  clickAward: function(e) {
+  clickAward: function (e) {
     if (!this.data.ongoing) {
-      return ;
+      return;
     }
 
     let index = e.currentTarget.dataset.index;
     let award = this.data.lists[index];
 
-    let url = '/pages/calendar/calendar?habit_id=' + award.habit._id + '&type=award&time=' + (award.lastTime ? award.lastTime : -1) + '&count=' + (award.lastCount ? award.lastCount : -1) + '&award=' + JSON.stringify(award);
-    
+    let url =
+      "/pages/calendar/calendar?habit_id=" +
+      award.habit._id +
+      "&type=award&time=" +
+      (award.lastTime ? award.lastTime : -1) +
+      "&count=" +
+      (award.lastCount ? award.lastCount : -1) +
+      "&award=" +
+      JSON.stringify(award);
+
     wx.navigateTo({
-      url: url
+      url: url,
     });
   },
 
   /**
    * 添加
    */
-  add: function() {
+  add: function () {
     wx.navigateTo({
-      url: '/pages/award/add/add'
+      url: "/pages/award/add/add",
     });
   },
-  
+
   /**
    * 下拉刷新
    */
-  onPullDownRefresh: function(){
+  onPullDownRefresh: function () {
     this.setData({
-      page: 0
+      page: 0,
     });
 
     this.loadData();
@@ -177,7 +197,7 @@ Page({
   /**
    * 上滑加载更多
    */
-  onReachBottom: function(){
+  onReachBottom: function () {
     this.loadData();
   },
-})
+});

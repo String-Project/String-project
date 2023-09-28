@@ -4,19 +4,20 @@ import User from "../../manager/User.js";
 const app = getApp();
 
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     text: app.text.login,
 
-    data: [{
-      title: '芒果Daily',
-      data: '与好朋友共享每日清单\n快去提醒Ta打卡吧'
-    }],
+    data: [
+      {
+        title: "芒果Daily",
+        data: "与好朋友共享每日清单\n快去提醒Ta打卡吧",
+      },
+    ],
 
-    loading: false
+    loading: false,
   },
 
   /**
@@ -27,71 +28,72 @@ Page({
     app.globalData.needReloadPartner = false;
   },
 
-  login: function(e) {
+  login: function (e) {
     this.setData({
-      loading: true
+      loading: true,
     });
-    
+
     // 拒绝授权
     if (e.detail.errMsg == "getUserInfo:fail auth deny") {
       wx.showModal({
-        title: '请授权',
-        content: '否则您无法继续使用',
-        showCancel: false
+        title: "请授权",
+        content: "否则您无法继续使用",
+        showCancel: false,
       });
 
       this.setData({
-        loading: false
+        loading: false,
       });
 
-      return ;
+      return;
     }
 
-    
-    wx.cloud.callFunction({
-      name: "login",
-    }).then(res => {
-      //console.log(res)
-      if (res.errMsg == "cloud.callFunction:ok") {
-        let _openid = res.result.openid;
-        let userInfo = e.detail.userInfo;
-        userInfo._openid = _openid;
+    wx.cloud
+      .callFunction({
+        name: "login",
+      })
+      .then((res) => {
+        //console.log(res)
+        if (res.errMsg == "cloud.callFunction:ok") {
+          let _openid = res.result.openid;
+          let userInfo = e.detail.userInfo;
+          userInfo._openid = _openid;
 
-        User.login(userInfo).then(res => {
-          
-          app.globalData.userInfo = res.userInfo;
-          wx.setStorageSync('userInfo', res.userInfo);
+          User.login(userInfo)
+            .then((res) => {
+              app.globalData.userInfo = res.userInfo;
+              wx.setStorageSync("userInfo", res.userInfo);
 
-          app.globalData.partnerInfo = res.partnerInfo;
-          wx.setStorageSync('partnerInfo', res.partnerInfo);        
+              app.globalData.partnerInfo = res.partnerInfo;
+              wx.setStorageSync("partnerInfo", res.partnerInfo);
 
-          this.hello.show(userInfo.nickname);
+              this.hello.show(userInfo.nickname);
+            })
+            .catch((err) => {
+              wx.showModal({
+                title: "错误",
+                content: "网络异常[0]",
+                showCancel: false,
+              });
 
-        }).catch((err) => {
+              console.log(err);
+            });
+        } else {
           wx.showModal({
-            title: '错误',
-            content: "网络异常[0]",
-            showCancel: false
+            title: "错误",
+            content: "网络异常[1]",
+            showCancel: false,
           });
+        }
+      })
+      .catch((code, msg) => {
+        console.log(code, msg);
 
-          console.log(err);
-          
-        });
-      } else {
         wx.showModal({
-          title: '错误',
-          content: "网络异常[1]",
-          showCancel: false
+          title: "错误",
+          content: "网络异常[2]",
+          showCancel: false,
         });
-      }
-    }).catch((code, msg) => {
-      console.log(code, msg);
-      
-      wx.showModal({
-        title: '错误',
-        content: "网络异常[2]",
-        showCancel: false
       });
-    });
   },
-})
+});

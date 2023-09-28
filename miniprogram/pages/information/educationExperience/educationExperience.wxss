@@ -21,12 +21,12 @@
   height: fit-content;
   width: 343px;
 
-  background: #4F80FF;
+  background: #4f80ff;
   border-radius: 10px;
 }
 
 .nextText {
-  font-family: 'PingFang SC';
+  font-family: "PingFang SC";
   font-style: normal;
   font-weight: 600;
   font-size: 17px;
@@ -35,7 +35,7 @@
 
   text-align: center;
 
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .inputText {
@@ -52,7 +52,7 @@
 }
 
 .placeholderText {
-  font-family: 'PingFang SC';
+  font-family: "PingFang SC";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;

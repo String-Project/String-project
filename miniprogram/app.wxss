@@ -4,17 +4,18 @@
   flex-direction: column;
   /* align-items: center; */
   box-sizing: border-box;
-} 
+}
 
 .mango-bg {
   /* background: #FADF64; */
   background: #ffa751;
 }
 
-.circlehead{   
- height: 48px;    
- width: 48px;    
- border-radius: 25px;}
+.circlehead {
+  height: 48px;
+  width: 48px;
+  border-radius: 25px;
+}
 
 /* 渐变色 */
 .mango-grad-bg {
@@ -28,7 +29,7 @@
 }
 
 .main-color {
-  color: #3B353E;
+  color: #3b353e;
 }
 
 .common-header {
@@ -76,10 +77,10 @@
   margin: 5px 0;
 }
 .title > text {
-  font-size:20px;
-  font-weight:400;
-  color:#333;
-  background: linear-gradient(0deg,#FADF64 50%, transparent 50%);
+  font-size: 20px;
+  font-weight: 400;
+  color: #333;
+  background: linear-gradient(0deg, #fadf64 50%, transparent 50%);
   border-radius: 5px;
 }
 
@@ -91,5 +92,5 @@
 
 /* 全局背景 */
 .mango-main-bg {
-  background: #F5F5F5;
+  background: #f5f5f5;
 }

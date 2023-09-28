@@ -3,9 +3,9 @@
  * 默认主题 (#ee3f4d 茶花红)
  */
 .theme-default.theme-bg {
-    background: #ee3f4d;
+  background: #ee3f4d;
 }
 
 .theme-default .theme-bg {
-    background: #ee3f4d;
+  background: #ee3f4d;
 }

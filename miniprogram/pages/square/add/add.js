@@ -1,10 +1,9 @@
 // pages/square/add/add.js
-import Article from '../../../manager/Article.js';
+import Article from "../../../manager/Article.js";
 
 const app = getApp();
 
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -16,7 +15,7 @@ Page({
     share: 0,
     share_partner: false,
     content: "",
-    image: null
+    image: null,
   },
 
   /**
@@ -29,50 +28,50 @@ Page({
   /**
    * 选择图片
    */
-  chooseImage: function() {
+  chooseImage: function () {
     let that = this;
     wx.chooseImage({
-      count: 1,	
-      sizeType: ['compressed'],	// 压缩图
-      sourceType: ['album', 'camera'],
-      success: function(res) {
+      count: 1,
+      sizeType: ["compressed"], // 压缩图
+      sourceType: ["album", "camera"],
+      success: function (res) {
         that.setData({
-          image: res.tempFilePaths[0]
+          image: res.tempFilePaths[0],
         });
-      }
-    })
+      },
+    });
   },
 
   /**
    * 选择分享限度
    */
-  selectShare: function(e) {
+  selectShare: function (e) {
     let type = e.currentTarget.dataset.type;
-    let share = e.currentTarget.dataset.share;    
-  
+    let share = e.currentTarget.dataset.share;
+
     this.setData({
       share: type,
-      share_partner: Boolean(share)
+      share_partner: Boolean(share),
     });
   },
 
   /**
    * 正文输入
    */
-  contentInput: function(e) {
+  contentInput: function (e) {
     let value = e.detail.value;
     this.setData({
-      content: value
+      content: value,
     });
   },
 
   /**
    * 完成
    */
-  finish: function() {
+  finish: function () {
     if (this.data.content.length == 0) {
       this.toast.showWarning("啥都没写呢!");
-      return ;
+      return;
     } else {
       this.toast.showLoading();
 
@@ -83,14 +82,17 @@ Page({
         let name = Math.random() * 1000000;
         let cloudPath = name + filePath.match(/\.[^.]+?$/)[0];
 
-        wx.cloud.uploadFile({
-          cloudPath: cloudPath,
-          filePath: filePath,
-        }).then(res => {
-          this.publish(res.fileID);
-        }).catch(err => {
-          this.toast.showFailure("图片上传失败");
-        });
+        wx.cloud
+          .uploadFile({
+            cloudPath: cloudPath,
+            filePath: filePath,
+          })
+          .then((res) => {
+            this.publish(res.fileID);
+          })
+          .catch((err) => {
+            this.toast.showFailure("图片上传失败");
+          });
       }
     }
   },
@@ -98,33 +100,35 @@ Page({
   /**
    * 发布核心
    */
-  publish: function(fileID) {
+  publish: function (fileID) {
     let userInfo = app.globalData.userInfo;
     let data = {
       avatar: userInfo.avatar,
       image: fileID,
       content: this.data.content,
       share: parseInt(this.data.share),
-      share_partner: this.data.share_partner
+      share_partner: this.data.share_partner,
     };
 
-    Article.add(data).then(res => {
-      this.toast.showSuccess("发布成功");
-      
-      let pages = getCurrentPages();
-      let prePage = pages[ pages.length - 2 ];
+    Article.add(data)
+      .then((res) => {
+        this.toast.showSuccess("发布成功");
 
-      prePage.setData({
-        page: 0,
-        noMore: false,
-      });
-      prePage.loadData();
+        let pages = getCurrentPages();
+        let prePage = pages[pages.length - 2];
 
-      wx.navigateBack({
-          delta: 1
+        prePage.setData({
+          page: 0,
+          noMore: false,
+        });
+        prePage.loadData();
+
+        wx.navigateBack({
+          delta: 1,
+        });
+      })
+      .catch((err) => {
+        this.toast.showFailure(err);
       });
-    }).catch(err => {
-      this.toast.showFailure(err);
-    });
-  }
-})
+  },
+});

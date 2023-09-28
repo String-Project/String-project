@@ -1,5 +1,5 @@
 /* pages/authorize/authorize.wxss */
-.container{
+.container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -8,10 +8,8 @@
   justify-content: center;
 }
 
-
 page {
   background: #ffffff;
-
 }
 
 .guide {
@@ -21,7 +19,6 @@ page {
   display: flex;
   flex-direction: column;
 }
-
 
 .guide .t {
   margin-top: 10rpx;
@@ -52,7 +49,7 @@ page {
   color: #666;
 }
 
-.guide .type1{
+.guide .type1 {
   margin-top: 18rpx;
   text-align: center;
   display: flex;
@@ -60,7 +57,7 @@ page {
   justify-content: center;
   width: 50%;
   font-size: 30rpx;
-  color:#000000;
+  color: #000000;
   background-color: #f6f6f6;
   align-items: left;
   padding-top: 8rpx;
@@ -69,21 +66,20 @@ page {
   height: 75rpx;
   line-height: 60rpx;
 
-  border:0;
+  border: 0;
   border-radius: 30px;
 }
 
 .guide .btnhover {
-background-color: #4F80FF;
-color:#ffffff;
-border:0;
-border-radius: 30px;
+  background-color: #4f80ff;
+  color: #ffffff;
+  border: 0;
+  border-radius: 30px;
 }
 
 /* .guide .type1::after{
   border: 1px solid #E3BD4A;
 } */
-
 
 .guide .nav .end {
   margin-right: unset;
@@ -93,14 +89,13 @@ border-radius: 30px;
   display: flex;
   flex-direction: row;
   align-content: space-between;
-  font-size:35rpx;
+  font-size: 35rpx;
   font-weight: bold;
-  height:100rpx;
-  background-color: #4F80FF;
-  border:0;
+  height: 100rpx;
+  background-color: #4f80ff;
+  border: 0;
   color: #ffffff;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
 }
-

@@ -9,16 +9,16 @@ Component({
     title: String,
     transparent: {
       type: Boolean,
-      value: false
+      value: false,
     },
     alwaysShow: {
       type: Boolean,
-      value: false
+      value: false,
     },
     back: {
       type: Boolean,
-      value: false
-    }
+      value: false,
+    },
   },
 
   /**
@@ -31,46 +31,45 @@ Component({
   },
 
   lifetimes: {
-    attached: function() {
-    }
+    attached: function () {},
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-    show: function() {
+    show: function () {
       if (this.data.show == true) {
-        return ;
+        return;
       }
 
       this.setData({
         show: true,
-        first: false
+        first: false,
       });
     },
 
-    hide: function() {
+    hide: function () {
       if (this.data.show == false) {
-        return ;
+        return;
       }
 
       this.setData({
         show: false,
-        first: false
+        first: false,
       });
     },
 
-    goBack: function() {
+    goBack: function () {
       console.log("返回");
-      
+
       if (getCurrentPages().length === 1) {
         return wx.reLaunch({
-          url: '/pages/indexV2/index',
+          url: "/pages/indexV2/index",
         });
       }
 
       wx.navigateBack({});
-    }
-  }
-})
+    },
+  },
+});

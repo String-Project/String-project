@@ -5,28 +5,24 @@ Component({
   /**
    * 组件的属性列表
    */
-  properties: {
+  properties: {},
 
-  },
-  
-  externalClasses: ['custom-class'],
+  externalClasses: ["custom-class"],
 
   /**
    * 组件的初始数据
    */
-  data: {
-
-  },
+  data: {},
 
   /**
    * 组件的方法列表
    */
   methods: {
-    add: function (e) {      
-      app.globalData.formIds.push(e.detail.formId);      
-      
+    add: function (e) {
+      app.globalData.formIds.push(e.detail.formId);
+
       // 回调父层的onClickHandler函数
-      this.triggerEvent('ClickHandler', e, {});
-    }
-  }
-})
+      this.triggerEvent("ClickHandler", e, {});
+    },
+  },
+});

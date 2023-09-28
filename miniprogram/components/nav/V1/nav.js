@@ -7,12 +7,12 @@ Component({
     // 是否显示返回按钮
     goBack: {
       type: Boolean,
-      value: false
+      value: false,
     },
     // 深色模式（图标标题白色）
     dark: {
       type: Boolean,
-      value: false
+      value: false,
     },
     // 背景颜色
     bgColor: String,
@@ -20,14 +20,14 @@ Component({
     borderBottom: String,
     shadow: String,
     leftIcon: String,
-    leftHandler: null
+    leftHandler: null,
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    STATUSBAR_HEIGHT: wx.getSystemInfoSync().statusBarHeight
+    STATUSBAR_HEIGHT: wx.getSystemInfoSync().statusBarHeight,
   },
 
   /**
@@ -38,14 +38,14 @@ Component({
       // 如果只有一个页面，则返回主页
       if (getCurrentPages().length === 1) {
         return wx.reLaunch({
-          url: '/pages/home/index',
-        })
+          url: "/pages/home/index",
+        });
       }
-      wx.navigateBack({})
+      wx.navigateBack({});
     },
     // 需要在父组件：bindlefthandler
     onLeftHandler: function () {
-      this.triggerEvent('lefthandler', {}, {})
-    }
-  }
-})
+      this.triggerEvent("lefthandler", {}, {});
+    },
+  },
+});

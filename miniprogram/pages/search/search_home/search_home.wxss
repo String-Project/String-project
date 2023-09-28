@@ -1,178 +1,178 @@
 page {
-    background: #FFFFFF;
+  background: #ffffff;
 }
 /* 顶部 */
 .head {
-    position: absolute;
-    width: 100vw;
-    height: 150px;
+  position: absolute;
+  width: 100vw;
+  height: 150px;
 
-    z-index: 1;
-    background: #4F80FF;
+  z-index: 1;
+  background: #4f80ff;
 }
 /* 顶部椭圆 */
 .headEllipse {
-    position: absolute;
-    left: -76px;
-    width: 527px;
-    height: 203px;
-    top: 44px;
-    border-radius: 50% / 50%;
-    z-index: 1;
-    background: #4F80FF;
+  position: absolute;
+  left: -76px;
+  width: 527px;
+  height: 203px;
+  top: 44px;
+  border-radius: 50% / 50%;
+  z-index: 1;
+  background: #4f80ff;
 }
 /* 顶部文字框 */
 .stringTextBar {
-    position: absolute;
-    left: 4.27vw;
-    top: 6.40vh;
+  position: absolute;
+  left: 4.27vw;
+  top: 6.4vh;
 }
 /* 顶部文字1 */
 .stringText1 {
-    font-family: 'PingFang SC';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 34px;
-    color: #FFFFFF; 
+  font-family: "PingFang SC";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  color: #ffffff;
 }
 /* 顶部文字2 */
 .stringText2 {
-    font-family: 'PingFang SC';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 13px;
-    line-height: 18px;
-    color: #FFFFFF; 
+  font-family: "PingFang SC";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  color: #ffffff;
 }
 /* Swiper相关的样式 */
 .swiper {
-    position: absolute;
-    height: 145px;
-    top: 132px;
-    width: 100vw;
+  position: absolute;
+  height: 145px;
+  top: 132px;
+  width: 100vw;
 }
 .information {
-    height: 100%;
-    width: 100%;
-    /* background: black; */
-    border-radius: 2.56vw;
+  height: 100%;
+  width: 100%;
+  /* background: black; */
+  border-radius: 2.56vw;
 }
 /* 搜索框 */
 .searchBar {
-    position: absolute;
-    width: 87.69vw;
-    height: 5.57vh;
-    left: 6.15vw;
-    top: 293px;
+  position: absolute;
+  width: 87.69vw;
+  height: 5.57vh;
+  left: 6.15vw;
+  top: 293px;
 
-    z-index: 2;
-    background: #FFFFFF;
-    border: 2px solid #4F80FF;
-    box-sizing: border-box;
-    border-radius: 6.93vw;
+  z-index: 2;
+  background: #ffffff;
+  border: 2px solid #4f80ff;
+  box-sizing: border-box;
+  border-radius: 6.93vw;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;    /**子view垂直居中*/
-    vertical-align: center; /**垂直居中*/
+  display: flex;
+  flex-direction: row;
+  align-items: center; /**子view垂直居中*/
+  vertical-align: center; /**垂直居中*/
 }
 .placeholder {
-    /* font-family: PingFang SC; */
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.78vh;
-    line-height: 2.49vh;
+  /* font-family: PingFang SC; */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.78vh;
+  line-height: 2.49vh;
 
-    color: #C4C4C4;
+  color: #c4c4c4;
 }
 .inputText {
-    /* font-family: PingFang SC; */
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.78vh;
-    line-height: 2.49vh;
+  /* font-family: PingFang SC; */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.78vh;
+  line-height: 2.49vh;
 
-    color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.9);
 }
 /* 大家都在搜 */
 .allSearchView {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 87.69vw;
-    height: 2.49vh;
-    left: 6.15vw;
-    top: 353px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 87.69vw;
+  height: 2.49vh;
+  left: 6.15vw;
+  top: 353px;
 }
 .allSearch {
-    width: 21.79vw;
-    /* font-family: PingFang SC; */
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.78vh;
-    line-height: 2.49vh;
+  width: 21.79vw;
+  /* font-family: PingFang SC; */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.78vh;
+  line-height: 2.49vh;
 
-    color: #979797;
+  color: #979797;
 }
 .allSearchResultView {
-    position: absolute;
-    width: 86.92vw;
-    height: 36.73vh;
-    left: 6.15vw;
-    top: 381px;
+  position: absolute;
+  width: 86.92vw;
+  height: 36.73vh;
+  left: 6.15vw;
+  top: 381px;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 .allSearchResultItem {
-    width: auto;
-    height: 5.57vh;
-    display: flex;
-    background: rgba(79, 113, 190, 0.04);
-    border-radius: 2.56vw;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1.79vw;
-    margin-bottom: 1.18vh;
+  width: auto;
+  height: 5.57vh;
+  display: flex;
+  background: rgba(79, 113, 190, 0.04);
+  border-radius: 2.56vw;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.79vw;
+  margin-bottom: 1.18vh;
 }
 .allSearchResultText {
-    margin-right: 3.85vw;
-    max-width: 37.18vw;
-    overflow: hidden;
-    white-space: nowrap; /*不换行*/
-    text-overflow: ellipsis;
-    font-family: Noto Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.78vh;
-    line-height: 2.37vh;
+  margin-right: 3.85vw;
+  max-width: 37.18vw;
+  overflow: hidden;
+  white-space: nowrap; /*不换行*/
+  text-overflow: ellipsis;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.78vh;
+  line-height: 2.37vh;
 
-    color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.9);
 }
 /* 换一批 */
 .changeBatchView {
-    display: flex;
-    width: 21.79vw;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  width: 21.79vw;
+  justify-content: space-between;
+  align-items: center;
 }
 .changeBatchIcon {
-    margin-left: 3.85vw;
-    width: 33.69rpx;
-    height: 33.69rpx;
+  margin-left: 3.85vw;
+  width: 33.69rpx;
+  height: 33.69rpx;
 }
 .changeBatchText {
-    /* font-family: PingFang SC; */
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.78vh;
-    line-height: 2.49vh;
+  /* font-family: PingFang SC; */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.78vh;
+  line-height: 2.49vh;
 
-    text-align: right;
+  text-align: right;
 
-    color: #979797;
+  color: #979797;
 }

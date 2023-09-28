@@ -3,50 +3,50 @@
 @import "/Mango/Animation/mango.wxss";
 
 .nav {
-    width: 100vw;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background: white;
-    z-index: 999;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: white;
+  z-index: 999;
 
-    display: flex;
+  display: flex;
 }
 
 .iPhoneX {
-    height: 90px;   /* iPhoneX 44 + 46 */
+  height: 90px; /* iPhoneX 44 + 46 */
 }
 
 .normal {
-    height: 66px;   /* 普通手机 20 + 46 */ 
+  height: 66px; /* 普通手机 20 + 46 */
 }
 
 .normal-bg {
-    background: white;
+  background: white;
 }
 
 .transparent-bg {
-    background: transparent;
+  background: transparent;
 }
 
 .show {
-    opacity: 1;
+  opacity: 1;
 }
 
 .hide {
-    opacity: 0;
+  opacity: 0;
 }
 
 .body {
-    width: 100vw;
-    height: 46px;
-    bottom: 0;
-    position: absolute;
+  width: 100vw;
+  height: 46px;
+  bottom: 0;
+  position: absolute;
 
-    line-height: 46px;
-    text-align: center;
-    font-weight: 300;
-    font-size: 35rpx;
+  line-height: 46px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 35rpx;
 }
 
 /*
@@ -65,74 +65,73 @@
  * 3-13 15.37
  */
 
-
 /**
  * animation
  */
 .big-animation {
-    animation-name: big-animation;
-    -webkit-animation-name: big-animation;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    animation-timing-function: ease;
-    -webkit-animation-timing-function: ease;
-    transform-origin: top left;
-    -webkit-transform-origin: top left;
+  animation-name: big-animation;
+  -webkit-animation-name: big-animation;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+  transform-origin: top left;
+  -webkit-transform-origin: top left;
 }
 
 .small-animation {
-    animation-name: small-animation;
-    -webkit-animation-name: small-animation;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    animation-timing-function: ease;
-    -webkit-animation-timing-function: ease;
-    transform-origin: top left;
-    -webkit-transform-origin: top left;
+  animation-name: small-animation;
+  -webkit-animation-name: small-animation;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+  transform-origin: top left;
+  -webkit-transform-origin: top left;
 }
 
 @keyframes big-animation {
-    from {
-        transform: translateY(0)
-    }
+  from {
+    transform: translateY(0);
+  }
 
-    to {
-        transform: translateY(60)
-    }
+  to {
+    transform: translateY(60);
+  }
 }
 
 @-webkit-keyframes big-animation {
-    from {
-        transform: translateY(0);
-        -webkit-transform: translateY(0);
-    }
+  from {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
 
-    to {
-        transform: translateY(60);
-        -webkit-transform: translateY(60);
-    }
+  to {
+    transform: translateY(60);
+    -webkit-transform: translateY(60);
+  }
 }
 
 @keyframes small-animation {
-    from {
-        transform: scale(1);
-    }
+  from {
+    transform: scale(1);
+  }
 
-    to {
-        transform: scale(0.5);
-    }
+  to {
+    transform: scale(0.5);
+  }
 }
 
 @-webkit-keyframes small-animation {
-    from {
-        transform: scale(1);
-        -webkit-transform: scale(1);
-    }
+  from {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
 
-    to {
-        transform: scale(0.5);
-        -webkit-transform: scale(0.5);
-    }
+  to {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+  }
 }
 
 /* 返回 */
@@ -147,19 +146,18 @@
  * 3-20 16:27
  */
 .back {
-    width: 100rpx;
-    height: 46px;
-    position: absolute;
-    left: 20rpx;
-    bottom: 0;
+  width: 100rpx;
+  height: 46px;
+  position: absolute;
+  left: 20rpx;
+  bottom: 0;
 
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .back image {
-    width: 40rpx;
-    height: 40rpx;
+  width: 40rpx;
+  height: 40rpx;
 }
- 

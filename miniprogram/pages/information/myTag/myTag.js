@@ -1,39 +1,35 @@
 // pages/authorize/authorize.js
 
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-      step: 1,
-      counterId: '',
-      openid: '',
-      count: null,
-      queryResult: '',
-
+    step: 1,
+    counterId: "",
+    openid: "",
+    count: null,
+    queryResult: "",
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
-  },
+  onLoad: function (options) {},
 
   prevStep: function () {
     this.setData({
-      step: this.data.step - 1
-    })
+      step: this.data.step - 1,
+    });
   },
   nextStep: function () {
     this.setData({
-      step: this.data.step + 1
-    })
+      step: this.data.step + 1,
+    });
   },
   goHome: function () {
     wx.showToast({
-      title: '保存成功',
+      title: "保存成功",
       duration: 1800,
       mask: true,
       success: function () {
@@ -41,12 +37,12 @@ Page({
         setTimeout(function () {
           //要延时执行的代码
           wx.switchTab({
-            url: '/pages/information/mainpage/mainpage',
-          })
-        }, 1000) //延迟时间
-      }
-    })
-    
+            url: "/pages/information/mainpage/mainpage",
+          });
+        }, 1000); //延迟时间
+      },
+    });
+
     ///待上传到法商
     // this.setData({
     //   step: this.data.step + 1
@@ -56,70 +52,57 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
-  },
+  onReady: function () {},
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
-  },
+  onShow: function () {},
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-
-  },
+  onHide: function () {},
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-
-  },
+  onUnload: function () {},
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
-  },
+  onPullDownRefresh: function () {},
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-
-  },
+  onReachBottom: function () {},
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
-  },
+  onShareAppMessage: function () {},
   bindGetUserInfo: function (e) {
-    console.log(e)
-    if (e.detail.userInfo) {//用户按了允许授权按钮
-      
-      console.log(e.detail.userInfo)
-      wx.setStorage({
-        key: 'userInfo',
-        data: e.detail.userInfo
-      })
-      var pages = getCurrentPages();             //  获取页面栈
-      var prevPage = pages[pages.length - 2];    // 上一个页面
-      prevPage.setData({
-        update: true
-      })
-      wx.navigateBack({
-        delta: 1
-      })
+    console.log(e);
+    if (e.detail.userInfo) {
+      //用户按了允许授权按钮
 
-    } else {//用户按了拒绝按钮
+      console.log(e.detail.userInfo);
+      wx.setStorage({
+        key: "userInfo",
+        data: e.detail.userInfo,
+      });
+      var pages = getCurrentPages(); //  获取页面栈
+      var prevPage = pages[pages.length - 2]; // 上一个页面
+      prevPage.setData({
+        update: true,
+      });
+      wx.navigateBack({
+        delta: 1,
+      });
+    } else {
+      //用户按了拒绝按钮
     }
-  }
-})
+  },
+});

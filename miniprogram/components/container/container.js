@@ -3,22 +3,18 @@ Component({
   /**
    * 组件的属性列表
    */
-  externalClasses: ['custom-class'],
-  properties: {
-
-  },
+  externalClasses: ["custom-class"],
+  properties: {},
 
   /**
    * 组件的初始数据
    */
   data: {
-    STATUS_HEIGHT: wx.getSystemInfoSync().statusBarHeight
+    STATUS_HEIGHT: wx.getSystemInfoSync().statusBarHeight,
   },
 
   /**
    * 组件的方法列表
    */
-  methods: {
-
-  }
-})
+  methods: {},
+});

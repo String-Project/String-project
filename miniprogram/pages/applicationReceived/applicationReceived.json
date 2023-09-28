@@ -1,6 +1,5 @@
 {
-    "usingComponents": {},
-    "navigationBarTitleText": "我收到的申请",
-    "navigationBarTextStyle": "black"
-
+  "usingComponents": {},
+  "navigationBarTitleText": "我收到的申请",
+  "navigationBarTextStyle": "black"
 }

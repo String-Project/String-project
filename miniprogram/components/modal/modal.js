@@ -6,34 +6,32 @@ Component({
   properties: {
     title: {
       type: String,
-      value: ""
+      value: "",
     },
     close: {
       type: Boolean,
-      value: false
-    }
+      value: false,
+    },
   },
 
-  externalClasses: ['mango', 'fade-in', 'fade-out'],
+  externalClasses: ["mango", "fade-in", "fade-out"],
 
   /**
    * 组件的初始数据
    */
-  data: {
-
-  },
+  data: {},
 
   /**
    * 组件的方法列表
    */
   methods: {
-    ClickHandler: function(e) {
+    ClickHandler: function (e) {
       // 回调父层的onClickHandler函数
-      this.triggerEvent('ClickHandler', e, {});
+      this.triggerEvent("ClickHandler", e, {});
     },
-    
-    ClickClose: function(e) {
-      this.triggerEvent('ClickClose', e, {});
-    }
-  }
-})
+
+    ClickClose: function (e) {
+      this.triggerEvent("ClickClose", e, {});
+    },
+  },
+});

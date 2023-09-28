@@ -2,18 +2,15 @@
 
 // 弹窗风格
 const TOAST_STYLE = {
-  DEFAULT:  0,
-  MANGO:    1
+  DEFAULT: 0,
+  MANGO: 1,
 };
-
 
 Component({
   /**
    * 组件的属性列表
    */
-  properties: {
-
-  },
+  properties: {},
 
   /**
    * 组件的初始数据
@@ -22,7 +19,9 @@ Component({
     hidden: true,
     icon: "success",
     text: "loading",
-    style: (wx.getStorageSync('toastStyle') ? wx.getStorageSync('toastStyle') : TOAST_STYLE.DEFAULT)
+    style: wx.getStorageSync("toastStyle")
+      ? wx.getStorageSync("toastStyle")
+      : TOAST_STYLE.DEFAULT,
   },
 
   /**
@@ -31,65 +30,73 @@ Component({
   methods: {
     showLoading: function (text = "") {
       this.setData({
-        style: (wx.getStorageSync('toastStyle') ? wx.getStorageSync('toastStyle') : TOAST_STYLE.DEFAULT),
+        style: wx.getStorageSync("toastStyle")
+          ? wx.getStorageSync("toastStyle")
+          : TOAST_STYLE.DEFAULT,
         hidden: false,
         icon: "loading",
-        text: text
+        text: text,
       });
     },
 
     hideLoading: function () {
       this.setData({
-        hidden: true
+        hidden: true,
       });
     },
 
-    showSuccess: function(text = "") {
+    showSuccess: function (text = "") {
       this.setData({
-        style: (wx.getStorageSync('toastStyle') ? wx.getStorageSync('toastStyle') : TOAST_STYLE.DEFAULT),
+        style: wx.getStorageSync("toastStyle")
+          ? wx.getStorageSync("toastStyle")
+          : TOAST_STYLE.DEFAULT,
         hidden: false,
         icon: "success",
-        text: text
+        text: text,
       });
 
       let that = this;
       setTimeout(() => {
         that.setData({
-          hidden: true
+          hidden: true,
         });
       }, 1800);
     },
 
-    showFailure: function(text = "") {
+    showFailure: function (text = "") {
       this.setData({
-        style: (wx.getStorageSync('toastStyle') ? wx.getStorageSync('toastStyle') : TOAST_STYLE.DEFAULT),
+        style: wx.getStorageSync("toastStyle")
+          ? wx.getStorageSync("toastStyle")
+          : TOAST_STYLE.DEFAULT,
         hidden: false,
         icon: "failure",
-        text: text
+        text: text,
       });
 
       let that = this;
       setTimeout(() => {
         that.setData({
-          hidden: true
+          hidden: true,
         });
       }, 1800);
     },
 
-    showWarning: function(text = "") {
+    showWarning: function (text = "") {
       this.setData({
-        style: (wx.getStorageSync('toastStyle') ? wx.getStorageSync('toastStyle') : TOAST_STYLE.DEFAULT),
+        style: wx.getStorageSync("toastStyle")
+          ? wx.getStorageSync("toastStyle")
+          : TOAST_STYLE.DEFAULT,
         hidden: false,
         icon: "warning",
-        text: text
+        text: text,
       });
 
       let that = this;
       setTimeout(() => {
         that.setData({
-          hidden: true
+          hidden: true,
         });
       }, 1800);
-    }
-  }
-})
+    },
+  },
+});
