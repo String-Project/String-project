@@ -4,8 +4,8 @@
         <view class="loginText">如果一个人找不到方向</view>
     </view>
 
-    <button class="startButton" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
-        <view class="startText">获取头像</view>
+    <button class="startButton" bindtap="getUserProfile">
+        <view class="startText">获取信息</view>
     </button>
 </view>
 
@@ -15,8 +15,8 @@
         <view class="loginText">如果一个人努力不动了</view>
     </view>
 
-    <button class="startButton" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
-        <view class="startText">获取手机</view>
+    <button class="startButton" bindtap="next">
+        <view class="startText">下一步</view>
     </button>
 </view>
 
@@ -28,7 +28,7 @@
         <view class="welcomeChineseText">欢迎来到弦计划 体验相互成长的力量</view>
     </view>
 
-    <button class="startButton" bindtap="startFunction">
+    <button class="startButton" bindtap="register">
         <view class="startText">开始旅程</view>
     </button>
 </view>

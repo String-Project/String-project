@@ -21,8 +21,6 @@
     "compileHotReLoad": false,
     "lazyloadPlaceholderEnable": false,
     "useMultiFrameRuntime": true,
-    "useApiHook": true,
-    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -41,17 +39,11 @@
     "useStaticServer": true
   },
   "appid": "wx8d60424db5f9bcc3",
-  "projectname": "String-project",
-  "libVersion": "2.22.0",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
   "compileType": "miniprogram",
   "srcMiniprogramRoot": "miniprogram/",
-  "packOptions": {
-    "ignore": [],
-    "include": []
-  },
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
@@ -92,5 +84,10 @@
         }
       ]
     }
+  },
+  "libVersion": "2.22.0",
+  "packOptions": {
+    "ignore": [],
+    "include": []
   }
 }
