@@ -3,7 +3,7 @@
 <view class="amountBg">
     <!--view class="img"><image src="/images/mine/emptyAvatar.svg"
         style="width:49px;height:47px;"-->
-    <view class="img"><image src="{{userInfo.avatar}}"
+    <view class="img"><image src="{{userInfo.avatarUrl}}"
         class="circlehead">    
     </image></view>
     <view class="account">

@@ -31,18 +31,35 @@ Page({
 
   // onLoad函数
   onLoad: function (options) {
-    var that = this;
-    // 登录态
-    if (app.globalData.userInfo == null || app.globalData.userInfo == "") {
-      wx.redirectTo({
-        url: "../../login/login",
+    if (app.globalData.needReloadData) {
+      if (app.globalData.openId == null || app.globalData.openId == "") {
+        return;
+      }
+      // 登录态
+      if (app.globalData.userInfo == null || app.globalData.userInfo == "") {
+        wx.redirectTo({
+          url: "../../register/register",
+        });
+        return;
+      }
+      // 用户信息
+      that.setData({
+        userInfo: app.globalData.userInfo,
       });
-      return;
+    } else {
+      app.globalData.reloadCallback = () => {
+        if (app.globalData.openId == null || app.globalData.openId == "") {
+          return;
+        }
+        // 登录态
+        if (app.globalData.userInfo == null || app.globalData.userInfo == "") {
+          wx.redirectTo({
+            url: "../../register/register",
+          });
+          return;
+        }
+      };
     }
-    // 用户信息
-    that.setData({
-      userInfo: app.globalData.userInfo,
-    });
   },
 
   // onShow函数
