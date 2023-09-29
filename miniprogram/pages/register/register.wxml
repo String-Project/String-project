@@ -1,18 +1,7 @@
-<view wx:if="{{!avatarFlag && !phoneFlag}}">
+<view wx:if="{{flag == 0}}">
     <view class="login">
         <image src="/images/login/login1.svg" style="width:260px;margin-top:60px" mode="widthFix" />
         <view class="loginText">如果一个人找不到方向</view>
-    </view>
-
-    <button class="startButton" bindtap="getUserProfile">
-        <view class="startText">获取信息</view>
-    </button>
-</view>
-
-<view wx:if="{{avatarFlag && !phoneFlag}}">
-    <view class="login">
-        <image src="/images/login/login2.svg" style="width:260px;margin-top:60px" mode="widthFix" />
-        <view class="loginText">如果一个人努力不动了</view>
     </view>
 
     <button class="startButton" bindtap="next">
@@ -20,7 +9,18 @@
     </button>
 </view>
 
-<view wx:if="{{avatarFlag && phoneFlag}}">
+<view wx:if="{{flag == 1}}">
+    <view class="login">
+        <image src="/images/login/login2.svg" style="width:260px;margin-top:60px" mode="widthFix" />
+        <view class="loginText">如果一个人努力不动了</view>
+    </view>
+
+    <button class="startButton" bindtap="getUserProfile">
+        <view class="startText">获取信息</view>
+    </button>
+</view>
+
+<view wx:if="{{flag == 2}}">
     <view class="login">
         <image src="/images/login/login3.svg" style="width:260px;margin-top:60px" mode="widthFix" />
         <view class="loginText">那就一群人吧</view>

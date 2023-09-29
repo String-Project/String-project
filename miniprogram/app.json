@@ -2,13 +2,13 @@
   "pages": [
     "pages/search/search_home/search_home",
     "pages/information/mainpage/mainpage",
-    "pages/information/educationExperience/educationExperience",
+    "pages/information/education_experience/education_experiencb",
     "pages/register/register",
     "pages/search/search_input/search_input",
     "pages/mine/mine",
-    "pages/information/basicInformation/basicInformation",
-    "pages/information/workingExperience/workingExperience",
-    "pages/information/myTag/myTag"
+    "pages/information/basic_information/basic_information",
+    "pages/information/working_experience/working_experience",
+    "pages/information/my_tag/my_tag"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",
